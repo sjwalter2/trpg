@@ -7,3 +7,4 @@ event_inherited();
 type = "soldier"
 attackRange = 2
 actionMax = 4
+

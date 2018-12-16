@@ -27,3 +27,14 @@ noMove = 0
 alarm_set(0,1)
 arrow = instance_create_depth(x,y,depth+1,obj_charArrow)
 arrow.creator = id
+
+
+switch irandom_range(0,1){
+	case 0:
+		gender = "male";
+		break;
+	case 1:
+		gender = "female";
+		break;
+}
+name = generate_name(gender);

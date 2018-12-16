@@ -3,3 +3,6 @@
 
 	draw_text(50 + 100*team,10,actionMax - actionCurrent)
 	draw_text(50 + 100*team,50,currentMove)
+	if selected {
+		draw_text(50, 90,name);	
+	}
