@@ -1,6 +1,4 @@
 /// @description Insert description here
 // You can write your code in this editor
-setAlarm = 0
-currentAi = 0
-targets = 0
-depth = -50
+if(targets != 0)
+	draw_circle(targets.x,targets.y,5,0)

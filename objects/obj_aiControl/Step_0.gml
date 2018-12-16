@@ -17,6 +17,15 @@ with(obj_character)
 	}
 }
 
+	var pathBlank = []
+	with(obj_tiles)
+	{
+		inRange = 0
+		rangeOf = 0
+		pathX = pathBlank
+		pathY = pathBlank
+	}
+
 if(setAlarm)
 {
 	alarm_set(0,3)	

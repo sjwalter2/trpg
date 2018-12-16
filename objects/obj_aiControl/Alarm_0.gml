@@ -1,9 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
-
-var target = 0
 var dist = -1
 var targetTile = 0
+var target = 0
 with(obj_character)
 {
 	if(team != other.currentAi.team && (dist = -1 || dist > point_distance(other.currentAi.x,other.currentAi.y,x,y)))
@@ -30,7 +29,15 @@ if(instance_position(target.x,target.y,obj_tiles).inRange = 1 || instance_positi
 	{
 		with(obj_tiles)
 		{
-			if(inRange = 1 && !position_meeting(x,y,obj_character) && ((positionX - i = tile.positionX && positionY = tile.positionY) || (positionY - i = tile.positionY && positionX = tile.positionX) || (positionX + i = tile.positionX || positionY = tile.positionY)  || (positionY + i = tile.positionY && positionX = tile.positionX) || (positionY + (i - 1) = tile.positionY && positionX = tile.positionX + (i - 1)) || (positionY - (i - 1) = tile.positionY && positionX = tile.positionX + (i - 1)) || (positionY + (i - 1) = tile.positionY && positionX = tile.positionX - (i - 1)) || (positionY - (i - 1) = tile.positionY && positionX = tile.positionX - (i - 1)) ))
+			if(inRange = 1 && !position_meeting(x,y,obj_character) &&
+			((positionX - i = tile.positionX && positionY = tile.positionY) 
+			|| (positionY - i = tile.positionY && positionX = tile.positionX) 
+			|| (positionX + i = tile.positionX && positionY = tile.positionY)  
+			|| (positionY + i = tile.positionY && positionX = tile.positionX) 
+			|| (positionY + (i - 1) = tile.positionY && positionX = tile.positionX + (i - 1)) 
+			|| (positionY - (i - 1) = tile.positionY && positionX = tile.positionX + (i - 1)) 
+			|| (positionY + (i - 1) = tile.positionY && positionX = tile.positionX - (i - 1)) 
+			|| (positionY - (i - 1) = tile.positionY && positionX = tile.positionX - (i - 1))))
 			{
 				targetTile = id
 				i = 0
@@ -93,4 +100,4 @@ with(currentAi)
 	}
 }
 alarm_set(1,10)
-
+targets = target

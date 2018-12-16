@@ -1,14 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
-
-
-		
-if(move)
-	image_index = 0
-if(image_index = 1)
-{
-	image_index = 0
-	global.turn++
+move = 0
+global.turn++
 	if(global.turn > teams)
 		global.turn = 0
 		
@@ -32,4 +25,3 @@ if(image_index = 1)
 			
 		}
 	}
-}

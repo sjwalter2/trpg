@@ -12,5 +12,5 @@ else
 	with(obj_character)
 		if((noMove || actionCurrent = 0) && global.turn = team)
 			other.setAlarm = 0
-	
+	target = 0
 }
