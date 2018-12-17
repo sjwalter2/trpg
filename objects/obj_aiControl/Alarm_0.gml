@@ -41,7 +41,7 @@ if(instance_position(target.x,target.y,obj_tiles).inRange = 1 || instance_positi
 			{
 				targetTile = id
 				i = 0
-				
+				other.fire = 1
 			}
 		}
 	}
