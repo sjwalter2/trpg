@@ -27,3 +27,4 @@ noMove = 0
 alarm_set(0,1)
 arrow = instance_create_depth(x,y,depth+1,obj_charArrow)
 arrow.creator = id
+levelLayer = 0

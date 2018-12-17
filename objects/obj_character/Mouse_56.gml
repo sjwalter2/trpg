@@ -21,5 +21,6 @@ if(currentMove > 0 && !moving && !attack && team = 0 && arrow.count >= 1)
 		arrow.minArrow = 1
 		currentMove = actionCurrent
 	}
+	
 	instance_activate_object(id)
 }

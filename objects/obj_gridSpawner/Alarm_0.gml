@@ -43,6 +43,7 @@ while(playerSpawned < 20)
 	newPlayer.positionX = xx
 	newPlayer.positionY = yy
 	newPlayer.team = playerSpawned
+	newPlayer.levelLayer = irandom(1)
 	if(playerSpawned >= 3)
 		newPlayer.team = 1
 	else

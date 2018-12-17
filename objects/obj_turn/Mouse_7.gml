@@ -14,8 +14,9 @@ if(image_index = 1)
 		
 	with(obj_tiles)
 		inRange = 0
-		
-		
+	
+	instance_activate_all()
+	global.gameLayer = 0
 	with(obj_character)
 	{
 		moving = 0
@@ -32,4 +33,8 @@ if(image_index = 1)
 			
 		}
 	}
+	with(obj_character)
+		if(levelLayer != global.gameLayer)
+			instance_deactivate_object(id)	
+		
 }

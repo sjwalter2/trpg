@@ -135,6 +135,14 @@
             }
         },
         {
+            "Key": "4661941b-24d4-418a-bbf4-e92bf1aca6c9",
+            "Value": {
+                "id": "bb957f25-fe87-48ab-b757-582911054cea",
+                "resourcePath": "objects\\obj_layerSwitch\\obj_layerSwitch.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "488e556b-ba63-4e68-b579-ba107d78e9ac",
             "Value": {
                 "id": "6658e1c6-aea7-4b32-8e87-2caa7c6cc8c7",
