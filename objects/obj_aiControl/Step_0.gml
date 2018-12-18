@@ -2,15 +2,18 @@
 // You can write your code in this editor
 
 
-if(setAlarm = 0 && global.turn = 1)
+if(setAlarm = 0 && global.turn = 1 && ready)
 {
 currentAi = noone
 with(obj_character)
 	selected = 0
 with(obj_character)
 {
+	image_alpha = 1
 	if(levelLayer != global.gameLayer)
+	{
 		instance_deactivate_object(id)
+	}
 	if(other.switchTo)
 		actionCurrent = 0
 }
@@ -50,6 +53,8 @@ else if(!switchTo && (currentAi = noone || currentAi.noMove || currentAi.actionC
 else if((currentAi = noone || currentAi.noMove || currentAi.actionCurrent != 0 )&& global.gameLayer = 1)
 {
 	global.turn = 0	
+	ready = 0
+	instance_create_depth(0,0,-100,obj_cover)
 	var pathBlank = []
 	with(obj_tiles)
 	{

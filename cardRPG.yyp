@@ -79,6 +79,14 @@
             }
         },
         {
+            "Key": "28cbb5e5-9095-484f-85d7-c083730e7f04",
+            "Value": {
+                "id": "14b41837-ee1a-46c5-8d59-c9220e5ce059",
+                "resourcePath": "objects\\obj_cover\\obj_cover.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "2c092761-f6f4-4b55-9f32-5b7d4af30f55",
             "Value": {
                 "id": "afefabe7-f1ee-4ede-bfc2-e37e155c6a34",
@@ -380,6 +388,14 @@
                 "id": "9b076571-ca94-40e5-9ca8-eb82076e9e26",
                 "resourcePath": "options\\windows\\options_windows.yy",
                 "resourceType": "GMWindowsOptions"
+            }
+        },
+        {
+            "Key": "ccb360c0-599b-40ae-b77e-6cc1c4de69bb",
+            "Value": {
+                "id": "f29dfa3e-786d-4252-983d-86d8a57e98e1",
+                "resourcePath": "fonts\\font1\\font1.yy",
+                "resourceType": "GMFont"
             }
         },
         {

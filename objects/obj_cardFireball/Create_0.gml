@@ -4,8 +4,6 @@
 // Inherit the parent event
 event_inherited();
 
-
-
 minRange = 2
 maxRange = 3
 useTerrain = 0

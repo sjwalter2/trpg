@@ -1,9 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
-global.turn++
-	if(global.turn > teams)
-		global.turn = 0
-		
+
+	instance_activate_object(obj_aiControl)
 	var pathBlank = []
 	with(obj_tiles)
 	{
@@ -13,7 +11,7 @@ global.turn++
 		pathY = pathBlank
 	}
 	
-	instance_activate_all()
+
 	
 	with(obj_character)
 	{
@@ -24,6 +22,7 @@ global.turn++
 		arrow.pathY = []
 		arrow.count = 0
 		actionCurrent = 0
+		
 		if(global.turn != team)
 		{
 			actionCurrent = 0	
@@ -38,5 +37,6 @@ global.turn++
 		currentAi = noone
 		switchTo = 1	
 		setAlarm = 0
+		ready = 1
 	}
 		
