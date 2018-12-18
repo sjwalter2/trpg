@@ -31,7 +31,7 @@ if(image_index = 1 && global.turn = 0)
 		pathX = pathBlank
 		pathY = pathBlank
 	}
-	alarm_set(1,40)
+	alarm_set(1,50)
 	with(obj_character)
 		actionCurrent = 0
 }

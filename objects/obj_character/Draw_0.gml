@@ -109,12 +109,3 @@ draw_set_alpha(1)
 
 draw_self()
 
-if(moving)
-{
-	var w = global.tileWidth
-	var h = global.tileHeight
-	var xx = arrow.pathX[array_length_1d(arrow.pathX)-1]
-	var yy = arrow.pathY[array_length_1d(arrow.pathY)-1]
-	draw_circle(w/2 + w*xx, h/2 + h*yy, 5,0)	
-	
-}

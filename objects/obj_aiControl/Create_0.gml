@@ -7,4 +7,5 @@ fire = 0
 attack = -1
 switchTo = 0
 ready = 0
+readyMove= 0
 depth = -50

@@ -3,6 +3,7 @@
 var dist = -1
 var targetTile = 0
 var target = noone
+readyMove = 0
 with(obj_character)
 {
 	if(team != other.currentAi.team && (dist = -1 || dist > point_distance(other.currentAi.x,other.currentAi.y,x,y)))
@@ -97,8 +98,9 @@ with(currentAi)
 		arrow.pathY[array_length_1d(arrow.pathY)] = targetTile.positionY			
 		arrow.count = array_length_1d(arrow.pathX) -1 
 		currentMove = (actionMax - actionCurrent) - targetTile.checkAmount
-	
-		moving = 1
+		
+		other.readyMove = 1
+
 	}
 	else
 	{
@@ -110,5 +112,5 @@ with(currentAi)
 		rangeFound = 0	
 	}
 }
-alarm_set(1,10)
+alarm_set(1,20)
 targets = target
