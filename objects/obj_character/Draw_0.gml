@@ -2,10 +2,13 @@
 // You can write your code in this editor
 if(selected && !rangeFound && !attack)
 {
+	var pathBlank = []
 	with(obj_tiles)
 	{
 		inRange = 0
-		checkAmount = 0
+		rangeOf = 0
+		pathX = pathBlank
+		pathY = pathBlank
 	}
 
 	

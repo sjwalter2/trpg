@@ -4,8 +4,14 @@ global.turn++
 	if(global.turn > teams)
 		global.turn = 0
 		
+	var pathBlank = []
 	with(obj_tiles)
+	{
 		inRange = 0
+		rangeOf = 0
+		pathX = pathBlank
+		pathY = pathBlank
+	}
 	
 	instance_activate_all()
 	

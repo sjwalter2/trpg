@@ -33,12 +33,13 @@ if(selected)
 		image_xscale = 1
 		image_yscale = 1
 		touching = -1
+		var pathBlank = []
 		with(obj_tiles)
 		{
 			inRange = 0
-			checkAmount = 0
-			pathTo = []
-			rangeChar = 0
+			rangeOf = 0
+			pathX = pathBlank
+			pathY = pathBlank
 		}
 	}
 		

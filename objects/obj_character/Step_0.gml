@@ -5,17 +5,20 @@ arrow.pathY[0] = positionY
 
 if(moving)
 {
+	var pathBlank = []
+	var startX = positionX
+	var startY = positionY
 	with(obj_tiles)
 	{
 		inRange = 0
-		checkAmount = 0
-		pathTo = []
-		rangeChar = 0
+		rangeOf = 0
+		pathX = pathBlank
+		pathY = pathBlank
 	}
 	if(array_length_1d(arrow.pathX) >= movingCount + 1 )
 	{
-		var startX = arrow.pathX[movingCount]
-		var startY = arrow.pathY[movingCount]
+		startX = arrow.pathX[movingCount]
+		startY = arrow.pathY[movingCount]
 	}
 	
 	arrow.minArrow = movingCount

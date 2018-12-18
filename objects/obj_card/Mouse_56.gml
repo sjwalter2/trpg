@@ -18,10 +18,13 @@ image_yscale = 1
 			touching.selected = 1
 			touching.rangeFound = 0
 	
+			var pathBlank = []
 			with(obj_tiles)
 			{
 				inRange = 0
-				checkAmount = 0
+				rangeOf = 0
+				pathX = pathBlank
+				pathY = pathBlank
 			}
 			if(attack)
 			{

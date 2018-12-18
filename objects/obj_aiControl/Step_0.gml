@@ -50,8 +50,14 @@ else if(!switchTo && (currentAi = noone || currentAi.noMove || currentAi.actionC
 else if((currentAi = noone || currentAi.noMove || currentAi.actionCurrent != 0 )&& global.gameLayer = 1)
 {
 	global.turn = 0	
+	var pathBlank = []
 	with(obj_tiles)
+	{
 		inRange = 0
+		rangeOf = 0
+		pathX = pathBlank
+		pathY = pathBlank
+	}
 	
 	instance_activate_all()
 	global.gameLayer = 0

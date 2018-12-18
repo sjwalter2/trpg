@@ -11,10 +11,12 @@ if(inRange = 1)
 {
 	if(position_meeting(x,y,obj_character))
 	{
+		var pathBlank = []
 		inRange = 0
-		checkAmount = 0
-		pathTo = []
-		rangeChar = 0
+		rangeOf = 0
+		pathX = pathBlank
+		pathY = pathBlank
+
 	}
 	else
 	{
@@ -28,10 +30,12 @@ if(inRange = 2)
 {
 	if(position_meeting(x,y,obj_character) && instance_position(x,y,obj_character).attack)
 	{
+		var pathBlank = []
 		inRange = 0
-		checkAmount = 0
-		pathTo = []
-		rangeChar = 0	
+		rangeOf = 0
+		pathX = pathBlank
+		pathY = pathBlank
+
 	}
 	else
 		draw_sprite(spr_range1,0,x,y)

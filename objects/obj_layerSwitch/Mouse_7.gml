@@ -11,6 +11,17 @@ if(global.turn  = 0 && !move && image_index = 1)
 	global.gameLayer = !global.gameLayer
 	instance_activate_all()
 	with(obj_character)
+	{
+		selected = 0
 		if(levelLayer != global.gameLayer)
 			instance_deactivate_object(id)
+	}
+	var pathBlank = []
+	with(obj_tiles)
+	{
+		inRange = 0
+		rangeOf = 0
+		pathX = pathBlank
+		pathY = pathBlank
+	}
 }
