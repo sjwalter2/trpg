@@ -13,6 +13,9 @@ if(global.turn  = 0 && !move && image_index = 1)
 	with(obj_character)
 	{
 		selected = 0
+		arrow.pathX = []
+		arrow.pathY = []
+		arrow.count = 0
 		if(levelLayer != global.gameLayer)
 			instance_deactivate_object(id)
 	}

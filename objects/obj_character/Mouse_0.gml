@@ -1,6 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
-if(!selected)
+var currentAttack = 0
+with(obj_character)
+	if(attack)
+		currentAttack = 1
+		
+if(!selected && !currentAttack)
 {
 	var pathBlank = []
 	with(obj_tiles)
@@ -20,7 +25,9 @@ if(!selected)
 			arrow.pathY = pathBlank
 			arrow.pathX[0] = positionX
 			arrow.pathY[0] = positionY
+			currentMove = 0
 		}
+		
 	}
 	selected = 1
 	

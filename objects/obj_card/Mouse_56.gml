@@ -5,8 +5,8 @@ if(selected)
 selected = 0
 x = xstart
 y = ystart
-image_xscale = 1
-image_yscale = 1
+xSize = 1
+ySize = 1
 
 	if(touching != -1)
 	{
@@ -14,10 +14,11 @@ image_yscale = 1
 		{
 			touching.actionCurrent += cost
 			touching.currentMove = touching.actionCurrent
-		
+			touching.hover = 0
 			touching.selected = 1
 			touching.rangeFound = 0
-	
+			touching.attackCost = cost
+			touching.card = id
 			var pathBlank = []
 			with(obj_tiles)
 			{
@@ -42,6 +43,18 @@ image_yscale = 1
 				}
 			}
 			touching = -1
+		}
+		else
+		{
+			var pathBlank = []
+			with(obj_tiles)
+			{
+				inRange = 0
+				rangeOf = 0
+				pathX = pathBlank
+				pathY = pathBlank
+			}
+			touching.hover= 0
 		}
 		selected = 0
 	}

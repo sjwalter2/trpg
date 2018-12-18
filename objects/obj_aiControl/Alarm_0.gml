@@ -100,6 +100,15 @@ with(currentAi)
 	
 		moving = 1
 	}
+	else
+	{
+		moving = 0
+		movingCount = 0	
+		arrow.count = 0
+		arrow.minArrow = 1
+		currentMove = 0
+		rangeFound = 0	
+	}
 }
 alarm_set(1,10)
 targets = target

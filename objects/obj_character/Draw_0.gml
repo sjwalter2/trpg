@@ -98,8 +98,12 @@ if(selected && !rangeFound && !attack)
 
 
 draw_set_color(c_white)
+if(hover = 1)
+	draw_set_color(c_red)
+else if(hover = 2)
+	draw_set_color(c_black)
 draw_set_alpha(.8)
-if(selected)
+if(selected || hover)
 	draw_roundrect(x-sprite_width/2-2,y-sprite_height/2-2,x+sprite_width/2,y+sprite_height/2,0)
 draw_set_alpha(1)
 

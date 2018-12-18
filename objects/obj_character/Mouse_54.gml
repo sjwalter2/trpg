@@ -13,3 +13,9 @@ with(obj_tiles)
 	pathX = pathBlank
 	pathY = pathBlank
 }
+if(attack)
+{
+	attack = 0
+	actionCurrent -= attackCost
+	attackCost = 0
+}
