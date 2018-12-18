@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 
-if(currentMove > 0 && !moving && !attack && team = 0 && arrow.count >= 1)
+if(global.turn = 0 && currentMove > 0 && !moving && !attack && team = 0 && arrow.count >= 1)
 {
 	instance_deactivate_object(id)
 	var xx = arrow.pathX[arrow.count]

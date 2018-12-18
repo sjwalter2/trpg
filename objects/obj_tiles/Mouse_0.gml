@@ -4,9 +4,12 @@
 
 with(obj_character)
 {
-	if(global.turn = team && attack && other.inRange = 2 && !attacked)
+	if(global.turn = team && attack && other.inRange >= 2 && !attacked)
 	{
-		if(!position_meeting(other.x,other.y,obj_character) ||(position_meeting(other.x,other.y,obj_character) && instance_position(other.x,other.y,obj_character).team != team))
+		if((!position_meeting(other.x,other.y,obj_character) && card.hitGround) ||
+		(position_meeting(other.x,other.y,obj_character) && 
+		((instance_position(other.x,other.y,obj_character).team != team && card.hitEnemies) || 
+		(instance_position(other.x,other.y,obj_character).team = team && card.hitAllies))))
 		{
 			var ability = instance_create_depth(other.x,other.y,-30,card.object)
 			ability.creator = id

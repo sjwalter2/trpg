@@ -4,14 +4,14 @@
 // Inherit the parent event
 event_inherited();
 
-minRange = 0
-maxRange = 1
+minRange = -1
+maxRange = 3
 useTerrain = 0
-attack = 1
-object = obj_fire
+attack = 0
+object = obj_heal
 cost = 2
-damage = 3
-block = 0
-hitAllies = 0
-hitEnemies = 1
-hitGround = 1
+damage = -2
+block = 1
+hitAllies = 1
+hitEnemies = 0
+hitGround = 0

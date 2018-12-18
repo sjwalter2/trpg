@@ -1,14 +1,23 @@
 {
-    "id": "33bdcf68-b04e-47b4-8eb6-1a8df54b94e4",
+    "id": "0f4a10c4-9af1-402e-aa6c-9487dcde95b7",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_fire",
+    "name": "obj_cardHeal",
     "eventList": [
-        
+        {
+            "id": "b71af742-0126-4309-8b76-673fd9fd7501",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "0f4a10c4-9af1-402e-aa6c-9487dcde95b7"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
-    "parentObjectId": "4603f7b9-f92a-4457-ad97-686600242f75",
+    "parentObjectId": "2ded9e87-2505-4929-91b4-7f0e4e357420",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,
@@ -24,6 +33,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "a2bfa1ff-7c56-4903-a743-5b01d9c1d4d4",
+    "spriteId": "eb29ccd3-dd42-4d4a-9dfd-3961f7931e4e",
     "visible": true
 }

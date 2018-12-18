@@ -11,6 +11,9 @@ attack = 0
 cost = 0
 damage = 1
 block = 0
+hitAllies = 0
+hitGround = 0
+
 xSize = 1
 ySize = 1
 depth = -20

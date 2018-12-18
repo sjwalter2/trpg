@@ -23,12 +23,12 @@ if(selected && !rangeFound && !attack)
 	check_range(actionMax - actionCurrent,x,y,1,1, pathX, pathY)
 	with(obj_tiles)
 	{
-		if(inRange = 1)	
+		if(inRange = 1 && other.team != 0)	
 		{
 			var w = global.tileWidth
 			var h = global.tileHeight
 			var tile = 0
-			for(var i = 1; i <= other.attackRange; i++)	
+			for(var i = other.minRange; i <= other.attackRange; i++)	
 			{
 				if	(position_meeting(x + i*w, y, obj_tiles) && 
 					instance_position(x + i*w, y, obj_tiles).inRange = 0)
@@ -99,7 +99,7 @@ if(selected && !rangeFound && !attack)
 
 draw_set_color(c_white)
 if(hover = 1)
-	draw_set_color(c_red)
+	draw_set_color(c_yellow)
 else if(hover = 2)
 	draw_set_color(c_black)
 draw_set_alpha(.8)
@@ -108,4 +108,3 @@ if(selected || hover)
 draw_set_alpha(1)
 
 draw_self()
-

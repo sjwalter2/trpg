@@ -5,14 +5,18 @@ if(selected)
 	x = mouse_x
 	y = mouse_y
 	
-	if(place_meeting(x,y,obj_character))
+	if((touching = -1 && place_meeting(x,y,obj_character)) || place_meeting(x,y,touching))
 	{
-		with(obj_character)
+		alarm_set(0,-1)	
+		if(touching = -1)
 		{
-			hover = 0
-			if(place_meeting(x,y,other) && team = 0 && !attack)	
+			with(obj_character)
 			{
-				other.touching = id
+				hover = 0
+				if(place_meeting(x,y,other) && team = 0 && !attack)	
+				{
+					other.touching = id
+				}
 			}
 		}
 		
@@ -27,8 +31,8 @@ if(selected)
 					var pathY = []
 					pathX[0] = positionX
 					pathY[0] = positionY
-				check_range(other.maxRange,x,y,2,other.useTerrain,pathX,pathY)
-				check_range(other.minRange,x,y,0,other.useTerrain,pathX,pathY)
+				check_range(other.maxRange-1,x,y,2,other.useTerrain,pathX,pathY)
+				check_range(other.minRange-1,x,y,0,other.useTerrain,pathX,pathY)
 				
 				if(actionMax >= actionCurrent + other.cost)
 					hover = 1
@@ -36,23 +40,29 @@ if(selected)
 					hover = 2
 			}
 		}
-
-	}
-	else
-	{
-		xSize = 1
-		ySize = 1
-		with(touching)
-			hover = 0
-		touching = -1
-		var pathBlank = []
-		with(obj_tiles)
+		if(block && touching != -1)
 		{
-			inRange = 0
-			rangeOf = 0
-			pathX = pathBlank
-			pathY = pathBlank
+		xSize = .5
+		ySize = .5
+		with(touching)
+			{
+					var pathX = []
+					var pathY = []
+					pathX[0] = positionX
+					pathY[0] = positionY
+				check_range(other.maxRange-1,x,y,3,other.useTerrain,pathX,pathY)
+				check_range(other.minRange-1,x,y,0,other.useTerrain,pathX,pathY)
+				
+				if(actionMax >= actionCurrent + other.cost)
+					hover = 1
+				else
+					hover = 2
+			}
 		}
+	}
+	else if(alarm_get(0) = -1)
+	{
+		alarm_set(0,1)	
 	}
 		
 }

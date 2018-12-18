@@ -1,8 +1,8 @@
 {
-    "id": "33bdcf68-b04e-47b4-8eb6-1a8df54b94e4",
+    "id": "2cddd6e2-556a-4806-9daf-61d7a8e4b6d0",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_fire",
+    "name": "obj_heal",
     "eventList": [
         
     ],
@@ -24,6 +24,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "a2bfa1ff-7c56-4903-a743-5b01d9c1d4d4",
+    "spriteId": "184edb26-3c24-47fb-9eaa-ca5fe12a4dc5",
     "visible": true
 }

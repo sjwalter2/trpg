@@ -27,7 +27,7 @@ if(target != noone)
 if(instance_position(target.x,target.y,obj_tiles).inRange = 1 || instance_position(target.x,target.y,obj_tiles).inRange = 2)
 {
 	tile = instance_position(target.x,target.y,obj_tiles)
-	for(var i = currentAi.attackRange; i > 0; i--)
+	for(var i = currentAi.attackRange; i > currentAi.minRange - 1; i--)
 	{
 		with(obj_tiles)
 		{

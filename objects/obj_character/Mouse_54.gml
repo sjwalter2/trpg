@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+if(global.turn = 0)
+{
 selected = 0
 arrow.count = 0
 arrow.minArrow = 1
@@ -18,4 +20,5 @@ if(attack)
 	attack = 0
 	actionCurrent -= attackCost
 	attackCost = 0
+}
 }

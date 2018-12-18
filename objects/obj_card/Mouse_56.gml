@@ -36,10 +36,25 @@ ySize = 1
 					var pathY = []
 					pathX[0] = positionX
 					pathY[0] = positionY
-					check_range(other.maxRange,x,y,2,other.useTerrain,pathX,pathY)
-					check_range(other.minRange,x,y,0,other.useTerrain,pathX,pathY)
+					check_range(other.maxRange-1,x,y,2,other.useTerrain,pathX,pathY)
+					check_range(other.minRange-1,x,y,0,other.useTerrain,pathX,pathY)
 					attack = 1
-					attackDamage = 1
+					attackDamage = other.damage
+				}
+			}
+			if(block)
+			{
+				with(touching)
+				{
+
+					var pathX = []
+					var pathY = []
+					pathX[0] = positionX
+					pathY[0] = positionY
+					check_range(other.maxRange-1,x,y,3,other.useTerrain,pathX,pathY)
+					check_range(other.minRange-1,x,y,0,other.useTerrain,pathX,pathY)
+					attack = 1
+					attackDamage = other.damage
 				}
 			}
 			touching = -1

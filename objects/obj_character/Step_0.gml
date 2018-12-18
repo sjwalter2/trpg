@@ -60,3 +60,6 @@ if(currentHealth <= 0)
 {
 	instance_destroy()	
 }
+
+if(currentHealth > baseHealth)
+	currentHealth = baseHealth
