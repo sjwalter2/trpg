@@ -7,12 +7,16 @@ if(setAlarm = 0 && global.turn = 1)
 currentAi = noone
 with(obj_character)
 	selected = 0
-
 with(obj_character)
 {
 	if(levelLayer != global.gameLayer)
 		instance_deactivate_object(id)
-	else if(global.turn = team && !noMove && actionCurrent = 0 && !other.setAlarm)	
+	if(other.switchTo)
+		actionCurrent = 0
+}
+with(obj_character)
+{
+	if(global.turn = team && actionCurrent = 0 && !noMove && !other.setAlarm)	
 	{
 		selected = 1
 		other.setAlarm = 1
@@ -34,7 +38,7 @@ if(setAlarm)
 {
 	alarm_set(0,3)	
 }
-else if(currentAi = noone && global.gameLayer = 0)
+else if(!switchTo && (currentAi = noone || currentAi.noMove || currentAi.actionCurrent != 0 )&& global.gameLayer = 0)
 {
 	global.gameLayer = 1	
 	instance_activate_all()
@@ -42,7 +46,8 @@ else if(currentAi = noone && global.gameLayer = 0)
 		if(levelLayer != global.gameLayer)
 			instance_deactivate_object(id)
 }
-else if(currentAi = noone && global.gameLayer = 1)
+
+else if((currentAi = noone || currentAi.noMove || currentAi.actionCurrent != 0 )&& global.gameLayer = 1)
 {
 	global.turn = 0	
 	with(obj_tiles)
@@ -70,6 +75,7 @@ else if(currentAi = noone && global.gameLayer = 1)
 		if(levelLayer != global.gameLayer)
 			instance_deactivate_object(id)	
 }
+switchTo = 0
 }
 if(global.turn = 0)
 	setAlarm = 0

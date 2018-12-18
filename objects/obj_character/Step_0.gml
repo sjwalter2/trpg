@@ -12,9 +12,11 @@ if(moving)
 		pathTo = []
 		rangeChar = 0
 	}
-	var startX = arrow.pathX[movingCount]
-	var startY = arrow.pathY[movingCount]
-	
+	if(array_length_1d(arrow.pathX) >= movingCount + 1 )
+	{
+		var startX = arrow.pathX[movingCount]
+		var startY = arrow.pathY[movingCount]
+	}
 	
 	arrow.minArrow = movingCount
 	if(arrow.minArrow < 1)
