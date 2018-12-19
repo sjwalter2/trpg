@@ -20,5 +20,7 @@ if(attack)
 	attack = 0
 	actionCurrent -= attackCost
 	attackCost = 0
+	card.active = 0
+	card = 0
 }
 }

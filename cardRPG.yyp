@@ -39,6 +39,14 @@
             }
         },
         {
+            "Key": "07d3f5e6-87e1-4a4d-b00d-fba9939c2507",
+            "Value": {
+                "id": "ad363464-3d12-4c6f-ad37-36fcb097d709",
+                "resourcePath": "objects\\obj_discard\\obj_discard.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "080000fc-4c9a-4f69-b31d-9057e8d1ab2a",
             "Value": {
                 "id": "b8888080-dbbf-421e-8365-ca82954f5e1a",
@@ -76,6 +84,14 @@
                 "id": "ca770c3b-303d-48b3-a404-1d0c1ed38194",
                 "resourcePath": "sprites\\spr_range1\\spr_range1.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "1f078306-7c29-46d5-a6ff-39d519136740",
+            "Value": {
+                "id": "e6868dd6-e6fc-49eb-ac8d-825500d43581",
+                "resourcePath": "views\\1f078306-7c29-46d5-a6ff-39d519136740.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -172,6 +188,14 @@
                 "id": "9588a5c3-3f3e-4ae9-bbce-ff4ab0c34260",
                 "resourcePath": "views\\3c8c13bb-85da-4c06-84e2-f9e0b1a3bde4.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "3daffb1b-c130-4342-96d8-143841cb9d81",
+            "Value": {
+                "id": "6804aa01-08c3-4a3d-9bca-8155d3ae7882",
+                "resourcePath": "scripts\\arrangeHand\\arrangeHand.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -308,6 +332,14 @@
                 "id": "6bb4dc06-2ccf-4160-ba81-fe790063372f",
                 "resourcePath": "objects\\obj_mountainTile\\obj_mountainTile.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "8eb9dca2-2253-4b99-9bc1-2cf405efd2eb",
+            "Value": {
+                "id": "0d7d8f62-7778-4397-b0df-0cad1c947c8a",
+                "resourcePath": "scripts\\drawCards\\drawCards.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -527,6 +559,14 @@
             }
         },
         {
+            "Key": "f33b6c5d-9b76-4e05-8cc2-02a76a52a7c1",
+            "Value": {
+                "id": "cc4d76df-d229-4ad6-817b-3f436b50e394",
+                "resourcePath": "objects\\obj_deck\\obj_deck.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "f418569b-3bdd-4706-a0e4-364317f54032",
             "Value": {
                 "id": "76f8d831-69a6-4bf7-be8f-73662aac16fb",
@@ -560,7 +600,9 @@
         }
     ],
     "script_order": [
-        "2e7884ea-3953-49d6-8b00-b2e7cd428141"
+        "2e7884ea-3953-49d6-8b00-b2e7cd428141",
+        "8eb9dca2-2253-4b99-9bc1-2cf405efd2eb",
+        "3daffb1b-c130-4342-96d8-143841cb9d81"
     ],
     "tutorial": ""
 }

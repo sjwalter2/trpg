@@ -3,8 +3,8 @@
 if(selected)
 {
 selected = 0
-x = xstart
-y = ystart
+x = xStart
+y = yStart
 xSize = 1
 ySize = 1
 
@@ -19,6 +19,7 @@ ySize = 1
 			touching.rangeFound = 0
 			touching.attackCost = cost
 			touching.card = id
+			active = 1
 			var pathBlank = []
 			with(obj_tiles)
 			{

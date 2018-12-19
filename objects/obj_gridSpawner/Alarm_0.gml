@@ -45,7 +45,10 @@ while(playerSpawned < 10)
 	newPlayer.team = playerSpawned
 	newPlayer.levelLayer = irandom(1)
 	if(playerSpawned >= 3)
+	{
 		newPlayer.team = 1
+		newPlayer.ai = 1
+	}
 	else
 		newPlayer.team = 0
 	playerSpawned++

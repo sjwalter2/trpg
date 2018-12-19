@@ -14,3 +14,4 @@ if(selected)
 	
 draw_set_alpha(1)
 draw_sprite_ext(sprite_index,image_index,x,y,xSize,ySize,image_angle,image_blend,image_alpha)
+
