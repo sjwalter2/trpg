@@ -11,14 +11,14 @@ useTerrain = 0
 attack = 0
 block = 1
 
-object = obj_bagOfJunk
-cost = 1
+object = obj_junkRagDry
+cost = 0
 
-damage = 0
-bonusDamage = 1
+damage = -1
+bonusDamage = -1
 
 hitAllies = 1
-hitEnemies = 1
+hitEnemies = 0
 hitGround = 0
 
 magic = 1
