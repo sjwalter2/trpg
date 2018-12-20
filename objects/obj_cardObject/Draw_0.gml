@@ -1,7 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 draw_self()
-
+if(creator.attackDamage != 0)
+{
 draw_set_alpha(alarm_get(0)/10)
 draw_set_font(font1)
 var damage = creator.attackDamage
@@ -14,3 +15,4 @@ if(damage < 0)
 
 draw_text(x,bbox_top - (60-alarm_get(0)),damage)
 draw_set_alpha(1)
+}
