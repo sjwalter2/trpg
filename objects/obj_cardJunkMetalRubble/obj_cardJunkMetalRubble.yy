@@ -1,7 +1,7 @@
 {
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_cardJunkRagWet",
+    "name": "obj_cardJunkMetalRubble",
     "eventList": [
         {
             "modelName": "GMEvent",
@@ -10,7 +10,6 @@
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 0,
-            "m_owner": "5feed0ad-bdd4-4167-bda7-749f3844cf3b"
         },
         {
             "modelName": "GMEvent",
@@ -19,7 +18,6 @@
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 1,
             "eventtype": 2,
-            "m_owner": "5feed0ad-bdd4-4167-bda7-749f3844cf3b"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
