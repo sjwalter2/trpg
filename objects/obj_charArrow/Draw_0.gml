@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 draw_set_alpha(.6)
-if(count >= 1 && creator.team = global.turn && creator.team = 0)
+if(instance_exists(creator) && count >= 1 && creator.team = global.turn && creator.team = 0)
 {
 	draw_set_color(c_white)
 	var arrowWidth = 6

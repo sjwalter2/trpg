@@ -2,7 +2,8 @@
 // You can write your code in this editor
 var dist = -1
 var targetTile = 0
-var target = 0
+var target = noone
+readyMove = 0
 with(obj_character)
 {
 	if(team != other.currentAi.team && (dist = -1 || dist > point_distance(other.currentAi.x,other.currentAi.y,x,y)))
@@ -22,10 +23,11 @@ if((position_meeting(currentAi.x + w, currentAi.y, obj_character) || !position_m
 	(position_meeting(currentAi.x, currentAi.y - h, obj_character) || !position_meeting(currentAi.x, currentAi.y - h,  obj_tiles) || instance_position(currentAi.x, currentAi.y - h,  obj_tiles).impassable || instance_position(currentAi.x, currentAi.y - h, obj_tiles).moveCost > currentAi.actionMax - currentAi.actionCurrent))
 	currentAi.noMove = 1
 
+if(target != noone)
 if(instance_position(target.x,target.y,obj_tiles).inRange = 1 || instance_position(target.x,target.y,obj_tiles).inRange = 2)
 {
 	tile = instance_position(target.x,target.y,obj_tiles)
-	for(var i = currentAi.attackRange; i > 0; i--)
+	for(var i = currentAi.attackRange; i > currentAi.minRange; i--)
 	{
 		with(obj_tiles)
 		{
@@ -41,7 +43,7 @@ if(instance_position(target.x,target.y,obj_tiles).inRange = 1 || instance_positi
 			{
 				targetTile = id
 				i = 0
-				
+				other.fire = 1
 			}
 		}
 	}
@@ -55,7 +57,7 @@ else
 	dist = -1
 	with(obj_tiles)
 	{
-		if(inRange = 1 && (dist = -1 || dist > point_distance(x,y,target.x,target.y)))
+		if(target != noone && inRange = 1 && (dist = -1 || dist > point_distance(x,y,target.x,target.y)))
 		{
 			dist =  point_distance(x,y,target.x,target.y)
 			targetTile = id	
@@ -67,7 +69,8 @@ else
 		currentAi.noMove = 1
 	}
 }
-
+if(target = noone && currentAi != noone)
+	currentAi.noMove = 1
 with(currentAi)
 {
 	if(!noMove && array_length_1d(targetTile.pathX) > 0)
@@ -95,9 +98,19 @@ with(currentAi)
 		arrow.pathY[array_length_1d(arrow.pathY)] = targetTile.positionY			
 		arrow.count = array_length_1d(arrow.pathX) -1 
 		currentMove = (actionMax - actionCurrent) - targetTile.checkAmount
-	
-		moving = 1
+		
+		other.readyMove = 1
+
+	}
+	else
+	{
+		moving = 0
+		movingCount = 0	
+		arrow.count = 0
+		arrow.minArrow = 1
+		currentMove = 0
+		rangeFound = 0	
 	}
 }
-alarm_set(1,10)
+alarm_set(1,20)
 targets = target

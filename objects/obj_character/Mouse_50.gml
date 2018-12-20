@@ -1,7 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
-
-if(selected && !moving && team = 0 && global.turn = team && !attack)
+var currentAttack = 0
+with(obj_character)
+	if(attack)
+		currentAttack = 1
+		
+if(!currentAttack && selected && !moving && team = 0 && global.turn = team && !attack)
 {
 	if(position_meeting(mouse_x,mouse_y,obj_tiles))
 		{

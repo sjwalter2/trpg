@@ -4,30 +4,11 @@
     "mvc": "1.0",
     "name": "obj_fire",
     "eventList": [
-        {
-            "id": "2d26ba40-c57e-45f1-a3b8-b36c3d262c42",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 0,
-            "m_owner": "33bdcf68-b04e-47b4-8eb6-1a8df54b94e4"
-        },
-        {
-            "id": "29cfa45d-1e94-47bb-8bb3-57880f8c8661",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 2,
-            "m_owner": "33bdcf68-b04e-47b4-8eb6-1a8df54b94e4"
-        }
+        
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
-    "parentObjectId": "00000000-0000-0000-0000-000000000000",
+    "parentObjectId": "4603f7b9-f92a-4457-ad97-686600242f75",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,

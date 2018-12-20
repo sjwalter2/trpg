@@ -21,7 +21,7 @@ for(var i = 0; i < width; i++)
 	}
 }
 
-while(playerSpawned < 20)
+while(playerSpawned < 10)
 {
 	var spotFound = 0
 	while(!spotFound)
@@ -43,8 +43,12 @@ while(playerSpawned < 20)
 	newPlayer.positionX = xx
 	newPlayer.positionY = yy
 	newPlayer.team = playerSpawned
+	newPlayer.levelLayer = irandom(1)
 	if(playerSpawned >= 3)
+	{
 		newPlayer.team = 1
+		newPlayer.ai = 1
+	}
 	else
 		newPlayer.team = 0
 	playerSpawned++

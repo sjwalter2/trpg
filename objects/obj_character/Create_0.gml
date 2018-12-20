@@ -15,7 +15,7 @@ actionMax = 5
 actionCurrent = 0
 lastCost = []
 team = 0
-moveSpeed = 4
+moveSpeed = 5
 rangeFound = 0
 attack = 0
 attacked = 0
@@ -24,17 +24,14 @@ mouseDown = 0
 currentTile = 0
 ai = 0
 noMove = 0
+hover = 0
+attackCost = 0
+card = 0
 alarm_set(0,1)
 arrow = instance_create_depth(x,y,depth+1,obj_charArrow)
 arrow.creator = id
+healthBar = instance_create_depth(x,y,depth-30,obj_healthBar)
+healthBar.creator = id
 
-
-switch irandom_range(0,1){
-	case 0:
-		gender = "male";
-		break;
-	case 1:
-		gender = "female";
-		break;
-}
-name = generate_name(gender);
+levelLayer = 0
+minRange = 2

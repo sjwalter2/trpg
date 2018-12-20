@@ -5,16 +5,21 @@ arrow.pathY[0] = positionY
 
 if(moving)
 {
+	var pathBlank = []
+	var startX = positionX
+	var startY = positionY
 	with(obj_tiles)
 	{
 		inRange = 0
-		checkAmount = 0
-		pathTo = []
-		rangeChar = 0
+		rangeOf = 0
+		pathX = pathBlank
+		pathY = pathBlank
 	}
-	var startX = arrow.pathX[movingCount]
-	var startY = arrow.pathY[movingCount]
-	
+	if(array_length_1d(arrow.pathX) >= movingCount + 1 )
+	{
+		startX = arrow.pathX[movingCount]
+		startY = arrow.pathY[movingCount]
+	}
 	
 	arrow.minArrow = movingCount
 	if(arrow.minArrow < 1)
@@ -55,3 +60,6 @@ if(currentHealth <= 0)
 {
 	instance_destroy()	
 }
+
+if(currentHealth > baseHealth)
+	currentHealth = baseHealth

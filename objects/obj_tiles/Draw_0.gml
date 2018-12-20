@@ -11,10 +11,12 @@ if(inRange = 1)
 {
 	if(position_meeting(x,y,obj_character))
 	{
+		var pathBlank = []
 		inRange = 0
-		checkAmount = 0
-		pathTo = []
-		rangeChar = 0
+		rangeOf = 0
+		pathX = pathBlank
+		pathY = pathBlank
+
 	}
 	else
 	{
@@ -26,17 +28,13 @@ if(inRange = 1)
 	
 if(inRange = 2)
 {
-	if(position_meeting(x,y,obj_character) && instance_position(x,y,obj_character).attack)
-	{
-		inRange = 0
-		checkAmount = 0
-		pathTo = []
-		rangeChar = 0	
-	}
-	else
-		draw_sprite(spr_range1,0,x,y)
-	
+		draw_sprite(spr_range1,0,x,y)	
 }
+if(inRange = 3)
+{
+		draw_sprite(spr_range2,0,x,y)
+}
+
 
 if(target = 1 || (inRange = 1 && position_meeting(mouse_x,mouse_y,id)) && !mouse_check_button(mb_left))
 {
