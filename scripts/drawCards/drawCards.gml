@@ -17,7 +17,8 @@ for(var i = 0; i < amount; i++)
 		var card = ds_list_find_value(deck,size-1)
 		if(card = undefined)
 			break;
-		instance_create_depth(i*room_width/amount,room_height+32,-30,card)
+		with (instance_create_depth(i*room_width/amount,room_height+32,-30,card[0]))
+			upgrade = card[1]
 		hand++
 		ds_list_delete(deck,size-1)	
 		

@@ -13,7 +13,10 @@ if(global.turn != 0 && !discarded)
 	discarded = 1
 	with(obj_card)
 	{
-		ds_list_add(other.discard,object_index)
+		var array = []
+		array[0] = object_index
+		array[1] = upgrade
+		ds_list_add(other.discard,array)
 		instance_destroy()
 	}
 	

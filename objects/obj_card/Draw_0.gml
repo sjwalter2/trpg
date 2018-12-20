@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+if(upgrade)
+	image_blend = c_green
 draw_set_alpha(.6)
 draw_set_color(c_white)
 if(touching != -1)

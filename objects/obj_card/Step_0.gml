@@ -5,7 +5,7 @@ with(obj_card)
 	if(hover && id != other.id)
 		hovering = 1
 
-if(!hovering && position_meeting(mouse_x,mouse_y,id) && !mouse_check_button(mb_left))
+if(!active && !hovering && position_meeting(mouse_x,mouse_y,id) && !mouse_check_button(mb_left))
 {
 	with(obj_card)
 		hover = 0

@@ -7,12 +7,17 @@ if(!creator.ai)
 	{
 		with(obj_deck)
 		{
-			ds_list_add(discard, other.creator.card.object_index)
-			hand--
-			instance_destroy(other.creator.card)
-			arrangeHand()
+			var array = []
+			array[0] = other.creator.card.object_index
+			array[1] = other.creator.card.upgrade
+			ds_list_add(discard, array)
 		}
 		
 	}
-	
+	instance_destroy(creator.card)
+	with(obj_deck)
+		{
+			hand--
+			arrangeHand()
+		}
 }
