@@ -43,6 +43,13 @@ ySize = 1
 					attackDamage = other.damage + floor((other.magic*other.bonusDamage*(magic/2))) 
 									+ floor((other.physical*other.bonusDamage*(physical/2)))
 									+ floor((other.dexterity*other.bonusDamage*(dexterity/2)))
+									
+					if(other.minRange = -1)
+						with(obj_tiles)
+						{
+							if(positionX = other.positionX && positionY = other.positionY)	
+								inRange = 2
+						}
 				}
 			}
 			if(block)
@@ -60,6 +67,13 @@ ySize = 1
 					attackDamage = other.damage + floor((other.magic*other.bonusDamage*(magic/2))) 
 									+ floor((other.physical*other.bonusDamage*(physical/2)))
 									+ floor((other.dexterity*other.bonusDamage*(dexterity/2)))
+									
+					if(other.minRange = -1)
+						with(obj_tiles)
+						{
+							if(positionX = other.positionX && positionY = other.positionY)	
+								inRange = 3
+						}
 				}
 			}
 			touching = -1

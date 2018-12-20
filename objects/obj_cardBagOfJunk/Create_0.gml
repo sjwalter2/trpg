@@ -5,11 +5,11 @@
 event_inherited();
 
 minRange = -1
-maxRange = 1
+maxRange = 0
 
 useTerrain = 0
 attack = 0
-block = 0
+block = 1
 
 object = obj_bagOfJunk
 cost = 1
@@ -18,8 +18,8 @@ damage = 0
 bonusDamage = 0
 
 hitAllies = 1
-hitEnemies = 1
-hitGround = 0
+hitEnemies = 0
+hitGround = 1
 
 magic = 1
 physical = 0
