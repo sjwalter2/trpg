@@ -11,10 +11,10 @@ if(!active && !hovering && position_meeting(mouse_x,mouse_y,id) && !mouse_check_
 		hover = 0
 	y = yStart - sprite_height*.55	
 	hover = 1
-	image_xscale = 1.5
-	image_yscale = 1.5
-	xSize = 1.5
-	ySize = 1.5
+	image_xscale = 2
+	image_yscale = 2
+	xSize = 2
+	ySize = 2
 	depth = frontDepth
 	
 }

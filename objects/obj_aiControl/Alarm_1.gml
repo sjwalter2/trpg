@@ -27,11 +27,7 @@ if(fire = 1)
 		}
 	}
 }
-if(fire = 1 && goalX != targetX && currentAi.moving)
-{
-	currentAi.arrow.pathX[array_length_1d(currentAi.arrow.pathX)-1] = goalX
-	currentAi.arrow.pathY[array_length_1d(currentAi.arrow.pathY)-1] = goalY
-}
+
 
 var alarmSet = 0
 with(obj_character)
@@ -63,4 +59,13 @@ else
 	fire = 0
 	attack = -1
 	targets = 0
+}
+
+if(fire = 1 && goalX != targetX && currentAi.moving)
+{
+	currentAi.noMove = 0
+	setAlarm = 0
+	fire = 0
+	currentAi = noone
+	show_debug_message("reset")
 }
