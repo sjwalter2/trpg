@@ -1,3 +1,4 @@
+//drawCards(amount)
 var amount = argument0
 
 for(var i = 0; i < amount; i++)	
