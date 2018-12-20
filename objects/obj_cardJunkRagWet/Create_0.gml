@@ -4,8 +4,8 @@
 // Inherit the parent event
 event_inherited();
 
-minRange = 2
-maxRange = 3
+minRange = 0
+maxRange = 2
 
 useTerrain = 0
 attack = 1
