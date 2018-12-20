@@ -38,3 +38,14 @@ minRange = 2
 magic = 0
 physical = 0
 dexterity = 0
+
+
+switch irandom_range(0,1){
+	case 0:
+		gender = "male";
+		break;
+	case 1:
+		gender = "female";
+		break;
+}
+name = generateName(gender);
