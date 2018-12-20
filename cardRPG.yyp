@@ -311,6 +311,14 @@
             }
         },
         {
+            "Key": "63cc7b82-527e-4b22-8f25-dcd67909615c",
+            "Value": {
+                "id": "f1ca02e0-e8d3-4e72-8dd6-6e5844edceed",
+                "resourcePath": "sprites\\spr_cardBagOfJunk\\spr_cardBagOfJunk.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "75886860-046f-4793-bd2f-1fba43bb77f9",
             "Value": {
                 "id": "9962a0bf-5294-475a-b028-cf2cf63346ec",
