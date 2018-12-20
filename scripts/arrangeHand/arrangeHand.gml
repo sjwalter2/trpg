@@ -1,4 +1,4 @@
-var count = 0
+	var count = 0
 with(obj_card)
 	{
 		if(other.hand mod 2 = 0)
