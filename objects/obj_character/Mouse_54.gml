@@ -20,6 +20,7 @@ with(obj_tiles)
 	pathX = pathBlank
 	pathY = pathBlank
 }
+}
 if(attack)
 {
 	attack = 0
@@ -27,5 +28,4 @@ if(attack)
 	attackCost = 0
 	card.active = 0
 	card = 0
-}
 }

@@ -24,3 +24,4 @@ hitGround = 1
 magic = 1
 physical = 0
 dexterity = 0
+

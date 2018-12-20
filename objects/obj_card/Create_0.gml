@@ -31,4 +31,6 @@ yStart = ystart
 depth = -20
 frontDepth = -25
 baseDepth = -20
+upgrade = 0
 
+alarm_set(0,1)

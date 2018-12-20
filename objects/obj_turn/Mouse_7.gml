@@ -12,4 +12,6 @@ if(image_index = 1 && global.turn = 0)
 		global.turn++
 	if(global.turn > teams)
 		global.turn = 0
+		
+
 }

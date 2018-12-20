@@ -27,7 +27,7 @@ playerDepth = -10
 
 if(global.rand)
 {
-	global.seed = 1409
+	global.seed = irandom(2000)
 }
 random_set_seed(global.seed)
 	
