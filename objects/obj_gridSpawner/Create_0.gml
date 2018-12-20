@@ -11,8 +11,8 @@ tileTypes[3] = obj_waterTile
 tileWeight = []
 tileWeight[0] = 100;
 tileWeight[1] = 15;
-tileWeight[2] = 5;
-tileWeight[3] = 5;
+tileWeight[2] = 10;
+tileWeight[3] = 10;
 tileDepth = 0
 tileWidth = 32
 tileHeight = 32
@@ -25,5 +25,10 @@ global.width = width
 global.height = height
 playerDepth = -10
 
-randomize()
+if(global.rand)
+{
+	global.seed = irandom(2000)
+}
+random_set_seed(global.seed)
+	
 alarm_set(0,1)

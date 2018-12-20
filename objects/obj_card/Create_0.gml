@@ -12,6 +12,12 @@ useTerrain = 0
 attack = 0
 cost = 0
 damage = 1
+bonusDamage = 0
+magic = 0
+physical = 0
+dexterity = 0
+
+
 block = 0
 hitAllies = 0
 hitGround = 0
@@ -23,3 +29,6 @@ ySize = 1
 xStart = xstart
 yStart = ystart
 depth = -20
+frontDepth = -25
+baseDepth = -20
+

@@ -1,6 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
-if(global.turn = 0)
+var currentAttack = 0
+with(obj_character)
+	if(attack)
+		currentAttack = 1
+
+if(!currentAttack && global.turn = 0)
 {
 selected = 0
 arrow.count = 0

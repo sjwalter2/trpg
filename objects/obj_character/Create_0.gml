@@ -15,7 +15,7 @@ actionMax = 5
 actionCurrent = 0
 lastCost = []
 team = 0
-moveSpeed = 5
+moveSpeed = 16
 rangeFound = 0
 attack = 0
 attacked = 0
@@ -35,3 +35,6 @@ healthBar.creator = id
 
 levelLayer = 0
 minRange = 2
+magic = 0
+physical = 0
+dexterity = 0

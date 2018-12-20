@@ -239,6 +239,14 @@
             }
         },
         {
+            "Key": "4ec18b4e-338f-4427-a534-2885392ab529",
+            "Value": {
+                "id": "8e7d21ba-be6c-4b1f-903d-eeabbbb05b28",
+                "resourcePath": "objects\\obj_check\\obj_check.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "4f841132-f47d-4bc8-b43d-550c9e6f908b",
             "Value": {
                 "id": "8b9f18e3-66b2-4d1c-b993-e7720172e506",
@@ -332,6 +340,14 @@
                 "id": "6bb4dc06-2ccf-4160-ba81-fe790063372f",
                 "resourcePath": "objects\\obj_mountainTile\\obj_mountainTile.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "87b8ccd5-8f2c-4450-ae93-8a1b1f43f12b",
+            "Value": {
+                "id": "7430ba08-92cf-4faf-9b1b-5681edf9f3ef",
+                "resourcePath": "rooms\\room01\\room01.yy",
+                "resourceType": "GMRoom"
             }
         },
         {

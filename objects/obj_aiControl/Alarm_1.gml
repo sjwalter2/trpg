@@ -6,7 +6,32 @@ if(readyMove)
 	with(currentAi)	
 		moving = 1
 }
-
+var targetX = currentAi.arrow.pathX[array_length_1d(currentAi.arrow.pathX)-1]
+var targetY = currentAi.arrow.pathY[array_length_1d(currentAi.arrow.pathY)-1]
+var goalX = 0
+var goalY = 0
+if(fire = 1)
+{
+	with(obj_check)	
+	{
+		var tile = instance_position(x,y,obj_tiles)
+		goalX = tile.positionX
+		goalY = tile.positionY
+		var pathBlank = []
+		with(obj_tiles)
+		{
+			inRange = 0
+			rangeOf = 0
+			pathX = pathBlank
+			pathY = pathBlank
+		}
+	}
+}
+if(fire = 1 && goalX != targetX && currentAi.moving)
+{
+	currentAi.arrow.pathX[array_length_1d(currentAi.arrow.pathX)-1] = goalX
+	currentAi.arrow.pathY[array_length_1d(currentAi.arrow.pathY)-1] = goalY
+}
 
 var alarmSet = 0
 with(obj_character)
@@ -15,8 +40,9 @@ with(obj_character)
 		
 if(alarmSet)
 	alarm_set(1,10)
-else if(fire = 1)
+else if(fire = 1 && position_meeting(currentAi.x,currentAi.y,obj_check))
 {
+	
 	attack = instance_create_depth(targets.x,targets.y,-30,obj_fire)
 	attack.creator = currentAi.id
 	alarm_set(1,10)

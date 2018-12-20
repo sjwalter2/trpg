@@ -1,9 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
 var dist = -1
-var targetTile = 0
+var targetTile =noone
 var target = noone
+var mustMove = 0
 readyMove = 0
+fire = 0
 with(obj_character)
 {
 	if(team != other.currentAi.team && (dist = -1 || dist > point_distance(other.currentAi.x,other.currentAi.y,x,y)))
@@ -23,15 +25,15 @@ if((position_meeting(currentAi.x + w, currentAi.y, obj_character) || !position_m
 	(position_meeting(currentAi.x, currentAi.y - h, obj_character) || !position_meeting(currentAi.x, currentAi.y - h,  obj_tiles) || instance_position(currentAi.x, currentAi.y - h,  obj_tiles).impassable || instance_position(currentAi.x, currentAi.y - h, obj_tiles).moveCost > currentAi.actionMax - currentAi.actionCurrent))
 	currentAi.noMove = 1
 
-if(target != noone)
+if(target != 0 && target != noone)
 if(instance_position(target.x,target.y,obj_tiles).inRange = 1 || instance_position(target.x,target.y,obj_tiles).inRange = 2)
 {
 	tile = instance_position(target.x,target.y,obj_tiles)
 	for(var i = currentAi.attackRange; i > currentAi.minRange; i--)
 	{
-		with(obj_tiles)
+		with(currentAi)
 		{
-			if(inRange = 1 && !position_meeting(x,y,obj_character) &&
+			if(targetTile = noone && 
 			((positionX - i = tile.positionX && positionY = tile.positionY) 
 			|| (positionY - i = tile.positionY && positionX = tile.positionX) 
 			|| (positionX + i = tile.positionX && positionY = tile.positionY)  
@@ -41,13 +43,40 @@ if(instance_position(target.x,target.y,obj_tiles).inRange = 1 || instance_positi
 			|| (positionY + (i - 1) = tile.positionY && positionX = tile.positionX - (i - 1)) 
 			|| (positionY - (i - 1) = tile.positionY && positionX = tile.positionX - (i - 1))))
 			{
-				targetTile = id
-				i = 0
+				instance_create_depth(x,y,-100,obj_check)
+				targetTile = instance_position(x,y,obj_tiles)
+				i = minRange
 				other.fire = 1
 			}
 		}
 	}
-	if(targetTile = 0)
+	
+	tile = instance_position(target.x,target.y,obj_tiles)
+	if(fire = 0)
+	for(var i = currentAi.attackRange; i > currentAi.minRange; i--)
+	{
+		with(obj_tiles)
+		{
+			if(targetTile = noone && inRange = 1 && !position_meeting(x,y,obj_character) &&
+			((positionX - i = tile.positionX && positionY = tile.positionY) 
+			|| (positionY - i = tile.positionY && positionX = tile.positionX) 
+			|| (positionX + i = tile.positionX && positionY = tile.positionY)  
+			|| (positionY + i = tile.positionY && positionX = tile.positionX) 
+			|| (positionY + (i - 1) = tile.positionY && positionX = tile.positionX + (i - 1)) 
+			|| (positionY - (i - 1) = tile.positionY && positionX = tile.positionX + (i - 1)) 
+			|| (positionY + (i - 1) = tile.positionY && positionX = tile.positionX - (i - 1)) 
+			|| (positionY - (i - 1) = tile.positionY && positionX = tile.positionX - (i - 1))))
+			{
+				with(instance_create_depth(x,y,-100,obj_check))
+					color = c_red
+				targetTile = id
+				i = other.currentAi.minRange
+				other.fire = 1
+
+			}
+		}
+	}
+	if(targetTile = noone)
 	{
 		currentAi.noMove = 1
 	}
@@ -73,7 +102,7 @@ if(target = noone && currentAi != noone)
 	currentAi.noMove = 1
 with(currentAi)
 {
-	if(!noMove && array_length_1d(targetTile.pathX) > 0)
+	if(!noMove && targetTile != noone && array_length_1d(targetTile.pathX) > 0)
 	{
 		if((targetTile.pathX[0] = positionX && targetTile.pathY[0] = positionY + 1) ||
 		(targetTile.pathX[0] = positionX && targetTile.pathY[0] = positionY - 1) ||
@@ -112,5 +141,7 @@ with(currentAi)
 		rangeFound = 0	
 	}
 }
+
+
 alarm_set(1,20)
 targets = target

@@ -40,7 +40,9 @@ ySize = 1
 					check_range(other.maxRange-1,x,y,2,other.useTerrain,pathX,pathY)
 					check_range(other.minRange-1,x,y,0,other.useTerrain,pathX,pathY)
 					attack = 1
-					attackDamage = other.damage
+					attackDamage = other.damage + floor((other.magic*other.bonusDamage*(magic/2))) 
+									+ floor((other.physical*other.bonusDamage*(physical/2)))
+									+ floor((other.dexterity*other.bonusDamage*(dexterity/2)))
 				}
 			}
 			if(block)
@@ -55,7 +57,9 @@ ySize = 1
 					check_range(other.maxRange-1,x,y,3,other.useTerrain,pathX,pathY)
 					check_range(other.minRange-1,x,y,0,other.useTerrain,pathX,pathY)
 					attack = 1
-					attackDamage = other.damage
+					attackDamage = other.damage + floor((other.magic*other.bonusDamage*(magic/2))) 
+									+ floor((other.physical*other.bonusDamage*(physical/2)))
+									+ floor((other.dexterity*other.bonusDamage*(dexterity/2)))
 				}
 			}
 			touching = -1

@@ -4,9 +4,13 @@
 
 if(setAlarm = 0 && global.turn = 1 && ready)
 {
+with(obj_check)
+	instance_destroy()
 currentAi = noone
 with(obj_character)
 	selected = 0
+	
+
 with(obj_character)
 {
 	image_alpha = 1

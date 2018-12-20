@@ -5,13 +5,22 @@
 event_inherited();
 
 minRange = -1
-maxRange = 3
+maxRange = 2
+
 useTerrain = 0
 attack = 0
-object = obj_heal
-cost = 2
-damage = -2
 block = 1
+
+object = obj_heal
+cost = 3
+
+damage = -2
+bonusDamage = -1
+
 hitAllies = 1
 hitEnemies = 0
 hitGround = 0
+
+magic = 1
+physical = 0
+dexterity = 0

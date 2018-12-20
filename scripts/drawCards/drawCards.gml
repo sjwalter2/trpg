@@ -3,7 +3,7 @@ var amount = argument0
 for(var i = 0; i < amount; i++)	
 	{
 		var size = ds_list_size(deck) 
-		if(size <= 0 && ds_list_size(discard <= 0))
+		if(size <= 0 && ds_list_size(discard) <= 0)
 			break;
 		else if(size <= 0)
 		{
