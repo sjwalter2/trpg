@@ -30,7 +30,7 @@ card = 0
 alarm_set(0,1)
 arrow = instance_create_depth(x,y,depth+1,obj_charArrow)
 arrow.creator = id
-healthBar = instance_create_depth(x,y,depth-30,obj_healthBar)
+healthBar = instance_create_depth(x,y,depth-15,obj_healthBar)
 healthBar.creator = id
 
 levelLayer = 0

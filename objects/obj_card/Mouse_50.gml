@@ -5,9 +5,7 @@ if(selected)
 	x = mouse_x
 	y = mouse_y
 	
-	if	((touching = -1 && position_meeting(mouse_x,mouse_y,obj_character)  && 
-		instance_position(mouse_x,mouse_y,obj_character).team = 0) || 
-		position_meeting(mouse_x,mouse_y,touching))
+	if((touching = -1 && place_meeting(x,y,obj_character)) || place_meeting(x,y,touching))
 	{
 		alarm_set(0,-1)	
 		if(touching = -1)
@@ -15,7 +13,7 @@ if(selected)
 			with(obj_character)
 			{
 				hover = 0
-				if(position_meeting(x,y,other) && team = 0 && !attack)	
+				if(place_meeting(x,y,other) && team = 0 && !attack)	
 				{
 					other.touching = id
 				}
@@ -62,5 +60,9 @@ if(selected)
 			}
 		}
 	}
-
+	else if(alarm_get(0) = -1)
+	{
+		alarm_set(0,1)	
+	}
+		
 }

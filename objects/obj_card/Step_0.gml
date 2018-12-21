@@ -9,12 +9,13 @@ if(!active && !hovering && position_meeting(mouse_x,mouse_y,id) && !mouse_check_
 {
 	with(obj_card)
 		hover = 0
-	y = yStart - sprite_height*.55	
+	
 	hover = 1
-	image_xscale = 2
-	image_yscale = 2
-	xSize = 2
-	ySize = 2
+	image_xscale = 1
+	image_yscale = 3
+	y = yStart - sprite_height*.5
+	xSize = 3
+	ySize = 3
 	depth = frontDepth
 	
 }
@@ -25,8 +26,10 @@ else
 
 if(selected)
 {
-	image_xscale = 1
-	image_yscale = 1
+	image_xscale = .5
+	image_yscale = .5
+	xSize = .5
+	ySize = .5
 	with(all)	
 		selected = 0
 	selected = 1
@@ -42,13 +45,13 @@ else if(!hover)
 	depth = baseDepth
 }
 
-if(active)
+if(active && !selected)
 {
-	x = room_width + sprite_width
-	y = room_height/8
-	image_xscale = 2
-	image_yscale = 2
-	xSize = 2
-	ySize = 2
+	x = room_width + sprite_width+25
+	y = room_height/4
+	image_xscale = 1
+	image_yscale = 3
+	xSize = 3
+	ySize = 3
 	activeText = beginText + string(abs(attackDamage)) + " DMG"
 }
