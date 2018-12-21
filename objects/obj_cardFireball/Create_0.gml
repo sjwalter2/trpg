@@ -22,6 +22,7 @@ hitEnemies = 1
 hitGround = 1
 
 magic = 1
-physical = 1
-dexterity = 1
-
+physical = 0
+dexterity = 0
+cardText = ""
+beginText = "Deal "

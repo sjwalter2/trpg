@@ -21,8 +21,9 @@ hitAllies = 0
 hitEnemies = 1
 hitGround = 1
 
-magic = 1
-physical = 0
+magic = 0
+physical = 1
 dexterity = 0
 
 exhaust = 1
+beginText = "Deal "

@@ -4,7 +4,7 @@ var attacking = 0
 with(obj_character)
 	if(attack)
 		attacking = 1
-if(!attacking)
+if(!attacking && !selected)
 {
 with(all)
 	selected = 0

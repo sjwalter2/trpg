@@ -95,6 +95,22 @@
             }
         },
         {
+            "Key": "12b7bb42-4dd1-44be-b746-001be70f8e98",
+            "Value": {
+                "id": "4c022daa-5885-4926-8b6c-fb90b15b9569",
+                "resourcePath": "fonts\\font2\\font2.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
+            "Key": "17385489-91d3-488c-979e-0f1e4c3d5c5e",
+            "Value": {
+                "id": "c57d2c1f-2b6e-4b9c-8b33-de4dc64d834e",
+                "resourcePath": "fonts\\font21\\font21.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
             "Key": "184edb26-3c24-47fb-9eaa-ca5fe12a4dc5",
             "Value": {
                 "id": "635e1719-18a5-428a-86a3-23abd4f774bf",
@@ -156,6 +172,14 @@
                 "id": "dbbe0138-aa0e-4613-af95-00cfd5961286",
                 "resourcePath": "sprites\\spr_magic\\spr_magic.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "2bc1b9c7-3e31-4a66-981b-f2000e7930bf",
+            "Value": {
+                "id": "85bf2167-3433-42b8-8398-b20a2b8dbcc4",
+                "resourcePath": "fonts\\font22\\font22.yy",
+                "resourceType": "GMFont"
             }
         },
         {
@@ -500,6 +524,14 @@
                 "id": "0824f9b9-e2d3-4af2-a6d5-e48d42880256",
                 "resourcePath": "views\\9f7a22a3-c585-4c49-afd6-bb7986157573.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "a0646235-5296-478b-ba56-251c621262b7",
+            "Value": {
+                "id": "0a05a778-061d-429b-94d1-564a19fa9a72",
+                "resourcePath": "sprites\\spr_hover\\spr_hover.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

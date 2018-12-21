@@ -5,7 +5,7 @@ with(obj_card)
 	if(hover && id != other.id)
 		hovering = 1
 
-if(!active && !hovering && position_meeting(mouse_x,mouse_y,id) && !mouse_check_button(mb_left))
+if(!active && !hovering && position_meeting(mouse_x,mouse_y,id) && !mouse_check_button(mb_left) && device_mouse_y_to_gui(0) <display_get_gui_height() - 48)
 {
 	with(obj_card)
 		hover = 0
@@ -44,6 +44,11 @@ else if(!hover)
 
 if(active)
 {
-	x = room_width + sprite_width*2
+	x = room_width + sprite_width
 	y = room_height/8
+	image_xscale = 2
+	image_yscale = 2
+	xSize = 2
+	ySize = 2
+	activeText = beginText + string(abs(attackDamage)) + " DMG"
 }

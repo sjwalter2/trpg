@@ -3,8 +3,8 @@
 positionX = -1
 positionY = -1
 baseMovement = 5
-baseHealth = 5
-currentHealth = 5
+baseHealth = 40
+currentHealth = baseHealth
 attackRange = 1
 moveMod = 0
 currentMove = 0

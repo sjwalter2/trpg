@@ -8,4 +8,5 @@ type = "soldier"
 attackRange = 2
 minRange = 0
 actionMax = 4
-attackDamage = 1
+attackDamage = 5
+baseHealth = 20

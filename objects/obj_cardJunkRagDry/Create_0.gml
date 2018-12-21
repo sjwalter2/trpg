@@ -26,3 +26,4 @@ physical = 0
 dexterity = 0
 
 exhaust = 1
+beginText = "Heal "

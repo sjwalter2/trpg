@@ -19,7 +19,11 @@ ySize = 1
 			touching.rangeFound = 0
 			touching.attackCost = cost
 			touching.card = id
+
 			active = 1
+			activeMagic = touching.magic
+			activePhysical = touching.physical
+			activeDexterity = touching.dexterity
 			var pathBlank = []
 			with(obj_tiles)
 			{
@@ -40,16 +44,19 @@ ySize = 1
 					check_range(other.maxRange-1,x,y,2,other.useTerrain,pathX,pathY)
 					check_range(other.minRange-1,x,y,0,other.useTerrain,pathX,pathY)
 					attack = 1
-					attackDamage = other.damage + floor((other.magic*other.bonusDamage*(magic/2))) 
-									+ floor((other.physical*other.bonusDamage*(physical/2)))
-									+ floor((other.dexterity*other.bonusDamage*(dexterity/2)))
+					attackDamage = other.damage + floor((other.magic*other.bonusDamage*(magic))) 
+									+ floor((other.physical*other.bonusDamage*(physical)))
+									+ floor((other.dexterity*other.bonusDamage*(dexterity)))
 									
+					other.attackDamage = attackDamage
 					if(other.minRange = -1)
 						with(obj_tiles)
 						{
 							if(positionX = other.positionX && positionY = other.positionY)	
 								inRange = 2
 						}
+						
+
 				}
 			}
 			if(block)
@@ -64,10 +71,10 @@ ySize = 1
 					check_range(other.maxRange-1,x,y,3,other.useTerrain,pathX,pathY)
 					check_range(other.minRange-1,x,y,0,other.useTerrain,pathX,pathY)
 					attack = 1
-					attackDamage = other.damage + floor((other.magic*other.bonusDamage*(magic/2))) 
-									+ floor((other.physical*other.bonusDamage*(physical/2)))
-									+ floor((other.dexterity*other.bonusDamage*(dexterity/2)))
-									
+					attackDamage = other.damage + floor((other.magic*other.bonusDamage*(magic))) 
+									+ floor((other.physical*other.bonusDamage*(physical)))
+									+ floor((other.dexterity*other.bonusDamage*(dexterity)))
+					other.attackDamage = attackDamage				
 					if(other.minRange = -1)
 						with(obj_tiles)
 						{

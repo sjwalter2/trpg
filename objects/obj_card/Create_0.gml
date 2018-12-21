@@ -32,5 +32,13 @@ depth = -20
 frontDepth = -25
 baseDepth = -20
 upgrade = 0
+cardText = ""
+activeText = ""
+beginText = ""
+attackDamage = 0
+activeMagic = 0
+activePhysical = 0
+activeDexterity = 0
 
 alarm_set(0,1)
+alarm_set(1,1)

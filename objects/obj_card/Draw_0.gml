@@ -17,22 +17,4 @@ if(selected)
 draw_set_alpha(1)
 draw_sprite_ext(sprite_index,image_index,x,y,xSize,ySize,image_angle,image_blend,image_alpha)
 
-if(hover)
-{
-	var offset = 0
-	if(magic)
-	{
-		draw_sprite(spr_magic,0, x+(sprite_width/2-8),y-(sprite_height/2)+7+18*offset)
-		offset++
-	}
-	if(physical)
-	{
-		draw_sprite(spr_physical,0, x+(sprite_width/2)-8,y-(sprite_height/2)+7+18*offset)
-		offset++
-	}
-	if(dexterity)
-	{
-		draw_sprite(spr_dex,0, x+(sprite_width/2)-8,y-(sprite_height/2)+7+18*offset)
-		offset++
-	}
-}
+

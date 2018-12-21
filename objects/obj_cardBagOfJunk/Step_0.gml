@@ -4,9 +4,5 @@
 // Inherit the parent event
 event_inherited();
 
-type = "bard"
-attackRange = 2
-magic = 5
-physical = 2
-dexterity = 4
-baseHealth = 40
+if(active)
+	activeText = "Grab " + string(upgrade + floor(activeMagic/2)) + " Rags" 
