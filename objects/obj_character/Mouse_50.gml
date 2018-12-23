@@ -35,7 +35,7 @@ if(!currentAttack && selected && !moving && team = 0 && global.turn = team && !a
 							tile.positionY = pathY[count - 1])
 							{
 								
-								tile =  instance_position(global.tileWidth/2 + pathX[count]*global.tileWidth, global.tileHeight/2 + pathY[count]*global.tileHeight,obj_tiles)
+								tile =  instance_position(global.offsetX + pathX[count]*global.tileWidth, global.offsetY + pathY[count]*global.tileHeight,obj_tiles)
 								other.currentMove -= tile.moveCost
 								count--
 							}

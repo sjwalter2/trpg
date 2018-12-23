@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
-width = 12
-height = 12
+width = global.width
+height = global.height
 
 tileTypes = []
 tileTypes[0] = obj_grassTile
@@ -14,15 +14,12 @@ tileWeight[1] = 15;
 tileWeight[2] = 10;
 tileWeight[3] = 10;
 tileDepth = 0
-tileWidth = 32
-tileHeight = 32
-offsetX = 16
-offsetY = 16
+tileWidth = global.tileWidth
+tileHeight = global.tileHeight
+offsetX = global.offsetX 
+offsetY = global.offsetY
 
-global.tileWidth = tileWidth
-global.tileHeight = tileHeight
-global.width = width
-global.height = height
+
 playerDepth = -10
 
 if(global.rand)

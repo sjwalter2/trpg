@@ -11,3 +11,5 @@ pathY = []
 pathSet = 0
 target = 0
 rangeOf = 0
+image_xscale = global.tileWidth/32
+image_yscale = global.tileHeight/32

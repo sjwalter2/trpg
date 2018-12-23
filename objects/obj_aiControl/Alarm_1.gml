@@ -5,11 +5,19 @@ if(readyMove)
 	readyMove = 0
 	with(currentAi)	
 		moving = 1
+	with(obj_camera)
+	{
+		x = other.currentAi.x
+		y = other.currentAi.y
+	}
 }
+if(array_length_1d(currentAi.arrow.pathX) > 0)
+{
 var targetX = currentAi.arrow.pathX[array_length_1d(currentAi.arrow.pathX)-1]
 var targetY = currentAi.arrow.pathY[array_length_1d(currentAi.arrow.pathY)-1]
 var goalX = 0
 var goalY = 0
+}
 if(fire = 1)
 {
 	with(obj_check)	

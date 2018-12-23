@@ -20,7 +20,7 @@ if(inRange = 1)
 	}
 	else
 	{
-		draw_sprite(spr_range,0,x,y)
+		draw_sprite_ext(spr_range,0,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)	
 	}
 	
 	
@@ -28,11 +28,11 @@ if(inRange = 1)
 	
 if(inRange = 2)
 {
-		draw_sprite(spr_range1,0,x,y)	
+		draw_sprite_ext(spr_range1,0,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)	
 }
 if(inRange = 3)
 {
-		draw_sprite(spr_range2,0,x,y)
+		draw_sprite_ext(spr_range2,0,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)	
 }
 
 

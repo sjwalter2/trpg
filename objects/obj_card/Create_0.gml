@@ -39,6 +39,7 @@ attackDamage = 0
 activeMagic = 0
 activePhysical = 0
 activeDexterity = 0
-
+targetX = 0
+targetY = 0
 alarm_set(0,1)
 alarm_set(1,1)

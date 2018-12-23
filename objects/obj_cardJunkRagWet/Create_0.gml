@@ -5,7 +5,7 @@
 event_inherited();
 
 minRange = 0
-maxRange = 2
+maxRange = 1
 
 useTerrain = 0
 attack = 1
@@ -15,7 +15,7 @@ object = obj_junkRagWet
 cost = 0
 
 damage = 1
-bonusDamage = 1
+bonusDamage = .5
 
 hitAllies = 0
 hitEnemies = 1

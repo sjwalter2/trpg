@@ -100,3 +100,5 @@ ySize = 1
 		selected = 0
 	}
 }
+
+alarm_set(2,2)

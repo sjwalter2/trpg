@@ -7,9 +7,9 @@ if(global.turn = 0 && currentMove > 0 && !moving && !attack && team = 0 && arrow
 	instance_deactivate_object(id)
 	var xx = arrow.pathX[arrow.count]
 	var yy = arrow.pathY[arrow.count]
-	var tile = instance_position(global.tileWidth/2 + xx*global.tileWidth,global.tileHeight/2 + yy*global.tileHeight,obj_tiles)
+	var tile = instance_position(global.offsetX  + xx*global.tileWidth,global.offsetY + yy*global.tileHeight,obj_tiles)
 	
-	if(global.turn = team && !position_meeting(global.tileWidth/2 + xx*global.tileWidth,global.tileHeight/2 + yy*global.tileHeight,obj_character) 
+	if(global.turn = team && !position_meeting(global.offsetX  + xx*global.tileWidth,global.offsetY + yy*global.tileHeight,obj_character) 
 	&& position_meeting(mouse_x,mouse_y,tile))
 	{
 		moving = 1

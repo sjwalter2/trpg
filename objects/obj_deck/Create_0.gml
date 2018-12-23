@@ -7,6 +7,10 @@ drawn = 0
 discarded = 0
 hand = 0
 deckSize = 9
+x = sprite_width
+y = display_get_gui_height() - sprite_height
+
+
 for(var i = 0; i < deckSize; i++)
 {
 	var card = 0

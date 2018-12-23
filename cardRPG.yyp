@@ -95,6 +95,14 @@
             }
         },
         {
+            "Key": "1261ec35-4daf-4f92-8ec5-8ec728503d3d",
+            "Value": {
+                "id": "b0e81b6c-cc67-427d-a73a-8ecf03e45819",
+                "resourcePath": "objects\\obj_camera\\obj_camera.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "12b7bb42-4dd1-44be-b746-001be70f8e98",
             "Value": {
                 "id": "4c022daa-5885-4926-8b6c-fb90b15b9569",

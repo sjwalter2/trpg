@@ -4,9 +4,9 @@ instance_destroy()
 var i;
 for (i = 0; i < floor(creator.card.upgrade + creator.magic/2); i+=1){
 	if irandom(1) == 1 {
-		instance_create_depth(0,room_height+32,-30,obj_cardJunkRagDry)
+		instance_create_depth(0,display_get_gui_height(),-30,obj_cardJunkRagDry)
 	} else {
-		instance_create_depth(0,room_height+32,-30,obj_cardJunkRagWet)		
+		instance_create_depth(0,display_get_gui_height(),-30,obj_cardJunkRagWet)		
 	}
 	with obj_deck {
 		hand++

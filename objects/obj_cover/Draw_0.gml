@@ -12,11 +12,3 @@ else
 draw_rectangle(0,0-200,room_width,room_height+200,0)
 
 
-draw_set_color(c_white)
-draw_set_font(font1)
-if(global.turn = 0)
-	draw_text(room_width/2,room_height/2, "Player Turn")
-	
-if(global.turn = 1)
-	draw_text(room_width/2,room_height/2, "Enemy Turn")
-draw_set_alpha(1)

@@ -24,11 +24,11 @@ if(moving)
 	arrow.minArrow = movingCount
 	if(arrow.minArrow < 1)
 		arrow.minArrow = 1
-	if(point_distance(x,y,global.tileWidth/2 + startX*global.tileWidth, global.tileHeight/2 + startY*global.tileHeight) <= moveSpeed)
+	if(point_distance(x,y,global.offsetX  + startX*global.tileWidth, global.offsetY + startY*global.tileHeight) <= moveSpeed)
 	{
 		movingCount++
 		
-		var tile = instance_position(global.tileWidth/2 + startX*global.tileWidth, global.tileHeight/2 + startY*global.tileHeight,obj_tiles)
+		var tile = instance_position( global.offsetX  + startX*global.tileWidth, global.offsetY + startY*global.tileHeight,obj_tiles)
 		if(currentTile != tile)
 			actionCurrent += tile.moveCost
 		currentTile = tile
@@ -38,8 +38,8 @@ if(moving)
 			moving = 0
 			movingCount = 0	
 			speed = 0
-			x = global.tileWidth/2 + startX*global.tileWidth
-			y = global.tileHeight/2 + startY*global.tileHeight
+			x = global.offsetX + startX*global.tileWidth
+			y = global.offsetY + startY*global.tileHeight
 			positionX = startX
 			positionY = startY
 			arrow.count = 0
@@ -49,7 +49,7 @@ if(moving)
 		}
 	}
 	else
-		move_towards_point(global.tileWidth/2 + startX*global.tileWidth, global.tileHeight/2 + startY*global.tileHeight,moveSpeed)
+		move_towards_point(global.offsetX + startX*global.tileWidth, global.offsetY + startY*global.tileHeight,moveSpeed)
 	
 }
 if(!selected)

@@ -4,3 +4,6 @@ global.gameLayer = 0
 
 			
 alarm_set(0,5)
+
+x = 100
+y = 150

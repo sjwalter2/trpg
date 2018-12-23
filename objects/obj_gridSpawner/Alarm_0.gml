@@ -21,7 +21,7 @@ for(var i = 0; i < width; i++)
 	}
 }
 
-while(playerSpawned < 10)
+while(playerSpawned < 8)
 {
 	var spotFound = 0
 	while(!spotFound)

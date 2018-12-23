@@ -9,7 +9,7 @@ if(instance_exists(creator) && count >= 1 && creator.team = global.turn && creat
 	var offsetY = 0
 	for(var i = minArrow; i <= count; i++)
 	{
-		switch(point_direction(global.tileWidth/2 + pathX[i-1]*global.tileWidth, global.tileHeight/2 + pathY[i-1]*global.tileHeight, global.tileWidth/2 + pathX[i]*global.tileWidth, global.tileHeight/2 + pathY[i]*global.tileHeight))
+		switch(point_direction(global.offsetX + pathX[i-1]*global.tileWidth, global.offsetY + pathY[i-1]*global.tileHeight, global.offsetX + pathX[i]*global.tileWidth, global.offsetY + pathY[i]*global.tileHeight))
 			{
 				case 0:
 					offsetX = -1
@@ -29,16 +29,16 @@ if(instance_exists(creator) && count >= 1 && creator.team = global.turn && creat
 				break;
 			}
 		if(i = minArrow)
-			draw_line_width(creator.x, creator.y, global.tileWidth/2 + pathX[i]*global.tileWidth - offsetX*arrowWidth/2, global.tileHeight/2 + pathY[i]*global.tileHeight - offsetY*arrowWidth/2, arrowWidth)
+			draw_line_width(creator.x, creator.y, global.offsetX  + pathX[i]*global.tileWidth - offsetX*arrowWidth/2, global.offsetY + pathY[i]*global.tileHeight - offsetY*arrowWidth/2, arrowWidth)
 		else
-			draw_line_width(global.tileWidth/2 + pathX[i-1]*global.tileWidth - offsetX*arrowWidth/2, global.tileHeight/2 + pathY[i-1]*global.tileHeight - offsetY*arrowWidth/2, global.tileWidth/2 + pathX[i]*global.tileWidth - offsetX*arrowWidth/2, global.tileHeight/2 + pathY[i]*global.tileHeight - offsetY*arrowWidth/2, arrowWidth)
+			draw_line_width(global.offsetX  + pathX[i-1]*global.tileWidth - offsetX*arrowWidth/2, global.offsetY + pathY[i-1]*global.tileHeight - offsetY*arrowWidth/2, global.offsetX  + pathX[i]*global.tileWidth - offsetX*arrowWidth/2, global.offsetY  + pathY[i]*global.tileHeight - offsetY*arrowWidth/2, arrowWidth)
 			
 		if(i = count)
 		{
-			var xx = global.tileWidth/2 + pathX[i]*global.tileWidth
-			var yy = global.tileHeight/2 + pathY[i]*global.tileHeight
+			var xx = global.offsetX  + pathX[i]*global.tileWidth
+			var yy = global.offsetY + pathY[i]*global.tileHeight
 			var hh = 5
-			switch(point_direction(global.tileWidth/2 + pathX[i-1]*global.tileWidth, global.tileHeight/2 + pathY[i-1]*global.tileHeight, global.tileWidth/2 + pathX[i]*global.tileWidth, global.tileHeight/2 + pathY[i]*global.tileHeight))
+			switch(point_direction(global.offsetX  + pathX[i-1]*global.tileWidth, global.offsetY + pathY[i-1]*global.tileHeight, global.offsetX  + pathX[i]*global.tileWidth, global.offsetY + pathY[i]*global.tileHeight))
 			{
 				case 0:
 					draw_triangle(xx - offsetX*arrowWidth/2,yy - hh, xx - offsetX*arrowWidth/2, yy+hh, xx+hh - offsetX*arrowWidth/2,yy,0)

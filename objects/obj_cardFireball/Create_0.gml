@@ -5,7 +5,7 @@
 event_inherited();
 
 minRange = 0
-maxRange = 1
+maxRange = 2
 
 useTerrain = 0
 attack = 1

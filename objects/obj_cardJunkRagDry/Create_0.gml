@@ -5,14 +5,14 @@
 event_inherited();
 
 minRange = -1
-maxRange = 2
+maxRange = 1
 
 useTerrain = 0
 attack = 0
 block = 1
 
 object = obj_junkRagDry
-cost = 0
+cost = 1
 
 damage = -1
 bonusDamage = -1
