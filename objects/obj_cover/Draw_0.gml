@@ -12,3 +12,4 @@ else
 draw_rectangle(0,0-200,room_width,room_height+200,0)
 
 
+draw_set_alpha(1)

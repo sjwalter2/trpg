@@ -1,64 +1,45 @@
-/// @description Insert description here
-// You can write your code in this editor
-var dist = -1
-var targetTile =noone
-var target = noone
-var mustMove = 0
-readyMove = 0
-fire = 0
-with(obj_character)
+with(currentAi)
 {
-	if(team != other.currentAi.team && (dist = -1 || dist > point_distance(other.currentAi.x,other.currentAi.y,x,y)))
+	characterRange()
+	var standing = instance_position(x,y,obj_tiles)
+	standing.inRange = 1
+}
+
+targets = noone
+fire = 0
+var dist = -1
+var currentTarget = noone
+var tile = noone
+var moveTile = noone
+var possibleTile = noone
+
+with(obj_tiles)
+{
+	if(inRange = 1)
 	{
-		dist = point_distance(other.currentAi.x,other.currentAi.y,x,y)	
-		target = id
+		with(obj_character)	
+		{
+			if(team = 0 && (dist = -1 || point_distance(other.x,other.y,x,y) < dist))	
+			{
+				dist = point_distance(other.x,other.y,x,y)
+				currentTarget = id
+				tile = instance_position(x,y,obj_tiles)
+				possibleTile = other.id
+			}
+		}
 	}
 }
 
 
-var tile = 0
-var w = global.tileWidth
-var h = global.tileHeight
-if((position_meeting(currentAi.x + w, currentAi.y, obj_character) || !position_meeting(currentAi.x + w, currentAi.y, obj_tiles) || instance_position(currentAi.x + w, currentAi.y, obj_tiles).impassable  || instance_position(currentAi.x + w, currentAi.y, obj_tiles).moveCost >  currentAi.actionMax - currentAi.actionCurrent) &&
-	(position_meeting(currentAi.x - w, currentAi.y, obj_character) || !position_meeting(currentAi.x - w, currentAi.y, obj_tiles) || instance_position(currentAi.x - w, currentAi.y,  obj_tiles).impassable|| instance_position(currentAi.x - w, currentAi.y, obj_tiles).moveCost > currentAi.actionMax - currentAi.actionCurrent) &&
-	(position_meeting(currentAi.x, currentAi.y + h, obj_character) || !position_meeting(currentAi.x, currentAi.y + h, obj_tiles) || instance_position(currentAi.x, currentAi.y + h,obj_tiles).impassable || instance_position(currentAi.x, currentAi.y + h, obj_tiles).moveCost > currentAi.actionMax - currentAi.actionCurrent) && 
-	(position_meeting(currentAi.x, currentAi.y - h, obj_character) || !position_meeting(currentAi.x, currentAi.y - h,  obj_tiles) || instance_position(currentAi.x, currentAi.y - h,  obj_tiles).impassable || instance_position(currentAi.x, currentAi.y - h, obj_tiles).moveCost > currentAi.actionMax - currentAi.actionCurrent))
-	currentAi.noMove = 1
 
-if(target != 0 && target != noone)
-if(instance_position(target.x,target.y,obj_tiles).inRange = 1 || instance_position(target.x,target.y,obj_tiles).inRange = 2)
-{
-	tile = instance_position(target.x,target.y,obj_tiles)
-	for(var i = currentAi.attackRange; i > currentAi.minRange; i--)
-	{
-		with(currentAi)
-		{
-			if(targetTile = noone && 
-			((positionX - i = tile.positionX && positionY = tile.positionY) 
-			|| (positionY - i = tile.positionY && positionX = tile.positionX) 
-			|| (positionX + i = tile.positionX && positionY = tile.positionY)  
-			|| (positionY + i = tile.positionY && positionX = tile.positionX) 
-			|| (positionY + (i - 1) = tile.positionY && positionX = tile.positionX + (i - 1)) 
-			|| (positionY - (i - 1) = tile.positionY && positionX = tile.positionX + (i - 1)) 
-			|| (positionY + (i - 1) = tile.positionY && positionX = tile.positionX - (i - 1)) 
-			|| (positionY - (i - 1) = tile.positionY && positionX = tile.positionX - (i - 1))))
-			{
-				instance_create_depth(x,y,-100,obj_check)
-				targetTile = instance_position(x,y,obj_tiles)
-				i = minRange
-				other.fire = 1
-			}
-		}
-	}
-	
-	tile = instance_position(target.x,target.y,obj_tiles)
-	if(fire = 0)
-	for(var i = currentAi.attackRange; i > currentAi.minRange; i--)
+var breakNow = 0
+for(var i = currentAi.attackRange; i > currentAi.minRange; i--)
 	{
 		with(obj_tiles)
 		{
-			if(targetTile = noone && inRange = 1 && !position_meeting(x,y,obj_character) &&
-			((positionX - i = tile.positionX && positionY = tile.positionY) 
+			if(currentTarget != noone && moveTile = noone && inRange = 1 && (!position_meeting(x,y,obj_character) 
+			|| instance_position(x,y,obj_character).id = other.currentAi) 
+			&&((positionX - i = tile.positionX && positionY = tile.positionY) 
 			|| (positionY - i = tile.positionY && positionX = tile.positionX) 
 			|| (positionX + i = tile.positionX && positionY = tile.positionY)  
 			|| (positionY + i = tile.positionY && positionX = tile.positionX) 
@@ -67,81 +48,39 @@ if(instance_position(target.x,target.y,obj_tiles).inRange = 1 || instance_positi
 			|| (positionY + (i - 1) = tile.positionY && positionX = tile.positionX - (i - 1)) 
 			|| (positionY - (i - 1) = tile.positionY && positionX = tile.positionX - (i - 1))))
 			{
-				with(instance_create_depth(x,y,-100,obj_check))
-					color = c_red
-				targetTile = id
-				i = other.currentAi.minRange
+				moveTile = id
 				other.fire = 1
-
+				breakNow = 1
+				break;				
 			}
 		}
+		if(breakNow)
+			break;
 	}
-	if(targetTile = noone)
+if(fire = 0)	
+	moveTile = possibleTile
+	
+
+if(moveTile != noone)
+{
+	with(obj_tiles)
+		target = 0
+	with(currentAi)
 	{
-		currentAi.noMove = 1
+		arrow.pathX = moveTile.pathX	
+		arrow.pathY = moveTile.pathY		
+		arrow.pathX[array_length_1d(arrow.pathX)] = moveTile.positionX
+		arrow.pathY[array_length_1d(arrow.pathY)] = moveTile.positionY			
+		arrow.count = array_length_1d(arrow.pathX) -1 
+		currentMove = (actionMax - actionCurrent) - moveTile.checkAmount	
+		moving = 1
+		aiMoved = 1
 	}
 }
 else
 {
-	dist = -1
-	with(obj_tiles)
-	{
-		if(target != noone && inRange = 1 && (dist = -1 || dist > point_distance(x,y,target.x,target.y)))
-		{
-			dist =  point_distance(x,y,target.x,target.y)
-			targetTile = id	
-		}
-		
-	}
-	if(point_distance(currentAi.x,currentAi.y,target.x,target.y) < dist)
-	{
-		currentAi.noMove = 1
-	}
-}
-if(target = noone && currentAi != noone)
-	currentAi.noMove = 1
-with(currentAi)
-{
-	if(!noMove && targetTile != noone && array_length_1d(targetTile.pathX) > 0)
-	{
-		if((targetTile.pathX[0] = positionX && targetTile.pathY[0] = positionY + 1) ||
-		(targetTile.pathX[0] = positionX && targetTile.pathY[0] = positionY - 1) ||
-		(targetTile.pathX[0] = positionX + 1 && targetTile.pathY[0] = positionY ) ||
-		(targetTile.pathX[0] = positionX - 1 && targetTile.pathY[0] = positionY )||
-		(targetTile.pathX[0] = positionX && targetTile.pathY[0] = positionY )
-		)
-		{
-			var i =0
-		}
-		else
-			noMove = 1
-	}
-	else
-		noMove = 1
-	if(!noMove)
-	{
-		arrow.pathX = targetTile.pathX	
-		arrow.pathY = targetTile.pathY
-			
-		arrow.pathX[array_length_1d(arrow.pathX)] = targetTile.positionX
-		arrow.pathY[array_length_1d(arrow.pathY)] = targetTile.positionY			
-		arrow.count = array_length_1d(arrow.pathX) -1 
-		currentMove = (actionMax - actionCurrent) - targetTile.checkAmount
-		
-		other.readyMove = 1
-
-	}
-	else
-	{
-		moving = 0
-		movingCount = 0	
-		arrow.count = 0
-		arrow.minArrow = 1
-		currentMove = 0
-		rangeFound = 0	
-	}
+	currentAi.aiMoved = 1
 }
 
-
-alarm_set(1,20)
-targets = target
+alarm_set(1,10)
+targets = currentTarget

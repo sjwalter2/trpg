@@ -33,10 +33,16 @@
 	}
 	instance_activate_all()
 	with(obj_aiControl)
+		{
+			ready = 0
+			alarm_set(3,40)
+		}
+	instance_activate_all()
+	global.gameLayer = 0
+	with(obj_character)
 	{
-		currentAi = noone
-		switchTo = 1	
-		setAlarm = 0
-		ready = 1
+		selected = 0
+		if(levelLayer != global.gameLayer)
+			instance_deactivate_object(id)
 	}
 		
