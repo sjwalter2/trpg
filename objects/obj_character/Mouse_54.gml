@@ -28,4 +28,5 @@ if(attack)
 	attackCost = 0
 	card.active = 0
 	card = 0
+	arrangeHand()
 }

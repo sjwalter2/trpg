@@ -17,7 +17,7 @@ for(var i = 0; i < amount; i++)
 		var card = ds_list_find_value(deck,size-1)
 		if(card = undefined)
 			break;
-		with (instance_create_depth(i*display_get_gui_width()/amount,display_get_gui_height(),-30,card[0]))
+		with (instance_create_depth(i*display_get_gui_width()/amount,display_get_gui_height()-20,-30,card[0]))
 			upgrade = card[1]
 		hand++
 		ds_list_delete(deck,size-1)	

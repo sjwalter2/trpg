@@ -14,7 +14,9 @@ if(!active && !hovering && collision_point(device_mouse_x_to_gui(0),device_mouse
 	hover = 1
 	image_xscale = 1
 	image_yscale = 2
-	y = yStart - sprite_height*.5
+	while(bbox_bottom > display_get_gui_height())
+		y--
+	
 	xSize = 2
 	ySize = 2
 	depth = frontDepth

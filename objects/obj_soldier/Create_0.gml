@@ -4,7 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
-type = "soldier"
+type = "Soldier"
 attackRange = 2
 minRange = 0
 actionMax = 4

@@ -4,5 +4,5 @@ global.turn = 0
 teams = 1
 move = 0
 
-x = 100
-y = 50
+x = 150
+y = 450

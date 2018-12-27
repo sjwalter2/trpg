@@ -4,7 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
-type = "bard"
+type = "Bard"
 attackRange = 2
 magic = 5
 physical = 2

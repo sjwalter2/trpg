@@ -41,6 +41,7 @@ physical = 0
 dexterity = 0
 
 
+
 switch irandom_range(0,1){
 	case 0:
 		gender = "male";

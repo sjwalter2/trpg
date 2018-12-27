@@ -4,7 +4,9 @@
 click_x = 0;
 click_y = 0;
 check = 0
-camera_set_view_pos(view_camera[0], 0, 0);
+x= room_width/2
+y = room_height/2
+camera_set_view_pos(view_camera[0], room_width/2, room_height/2);
 camera_set_view_size(view_camera[0], 960, 540);
 
 //Setting up object target information

@@ -4,9 +4,9 @@ randomize()
 
 global.tileWidth = 32
 global.tileHeight = 32
-global.width = 12
-global.height = 8
-var roomWidth = global.width*global.tileWidth + 200
+global.width = 15
+global.height = 25
+var roomWidth = global.width*global.tileWidth + 500
 var roomHeight = global.height*global.tileHeight + 200
 if(roomWidth < 668)
 	roomWidth = 668

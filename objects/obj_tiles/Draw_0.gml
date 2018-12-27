@@ -62,7 +62,9 @@ if(target = 1 || (inRange = 1 && position_meeting(mouse_x,mouse_y,id)) && !mouse
 			arrow.pathX[array_length_1d(arrow.pathX)] = other.positionX
 			arrow.pathY[array_length_1d(arrow.pathY)] = other.positionY			
 			arrow.count = array_length_1d(arrow.pathX) -1 
+			
 			currentMove = (actionMax - actionCurrent) - other.checkAmount
+			arrow.cost= currentMove
 		}
 
 	}

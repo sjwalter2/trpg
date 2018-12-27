@@ -54,13 +54,12 @@ if(global.turn != 0 && currentAi = noone && ready)
 			arrow.pathX = []
 			arrow.pathY = []
 			arrow.count = 0
-			if(global.turn != team)
-			{
+			
 				actionCurrent = 0	
 				currentMove = 0
 				rangeFound = 0
 			
-			}
+			
 		}
 		with(obj_character)
 			if(levelLayer != global.gameLayer)

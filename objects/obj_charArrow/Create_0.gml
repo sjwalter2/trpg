@@ -5,3 +5,4 @@ pathY = []
 count = 0
 minArrow = 1
 creator = 0
+cost = 0

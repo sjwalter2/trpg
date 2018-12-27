@@ -24,6 +24,25 @@ ySize = 1
 			activeMagic = touching.magic
 			activePhysical = touching.physical
 			activeDexterity = touching.dexterity
+			
+			if(minRange = -1 && maxRange = 0)
+			{
+				with(touching)
+				{
+					if(global.turn = team)
+					{
+						
+						var ability = instance_create_depth(other.x,other.y,-30,card.object)
+						ability.creator = id
+						with(ability)
+							alarm_set(0,1)
+						selected = 1
+						rangeFound = 0
+						attacked = 1
+						attack = 0
+					}	
+				}
+			}
 			var pathBlank = []
 			with(obj_tiles)
 			{

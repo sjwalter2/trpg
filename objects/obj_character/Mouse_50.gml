@@ -29,6 +29,7 @@ if(!currentAttack && selected && !moving && team = 0 && global.turn = team && !a
 								pathY[count] = tile.positionY
 								other.currentMove += tile.moveCost
 								other.lastCost[count] = tile.moveCost
+								cost = other.currentMove
 								
 							}
 						else if (count >= 1 && tile.positionX = pathX[count - 1] &&
@@ -37,6 +38,7 @@ if(!currentAttack && selected && !moving && team = 0 && global.turn = team && !a
 								
 								tile =  instance_position(global.offsetX + pathX[count]*global.tileWidth, global.offsetY + pathY[count]*global.tileHeight,obj_tiles)
 								other.currentMove -= tile.moveCost
+								cost = other.currentMove
 								count--
 							}
 					}

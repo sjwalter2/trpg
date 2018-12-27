@@ -1,8 +1,23 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+if(global.turn = 0)
+{
 x = mouse_x
 y = mouse_y
+}
+else
+{
+	with(obj_character)	
+	{
+		if(selected && image_alpha = 1)	
+		{
+			other.x = x
+			other.y = y
+			camera_set_view_pos(view_camera[0],other.x, other.y-275);
+		}
+	}
+}
+
 //Move the zoom level based on mouse scrolling. Clamp the value so stuff doesn't get too silly.
 prevZoom = zoom_level
 zoom_level = clamp(zoom_level + (((mouse_wheel_down() - mouse_wheel_up())) * 0.25), .5, 1);
@@ -34,7 +49,7 @@ camera_set_view_pos(view_camera[0],
 					
 					
 camera_set_view_speed(view_camera[0],8*zoom_level,8*zoom_level)
-camera_set_view_border(view_camera[0],40*zoom_level,40*zoom_level)
+camera_set_view_border(view_camera[0],10*zoom_level,10*zoom_level)
 
 
 //Check if the mouse is clicked. If so, update the click position.
