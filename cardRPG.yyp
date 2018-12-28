@@ -159,6 +159,14 @@
             }
         },
         {
+            "Key": "27b67f69-1f8b-4471-b507-1208897c8aa0",
+            "Value": {
+                "id": "92f97242-dbfa-4565-8d49-359a8c3f28a1",
+                "resourcePath": "objects\\obj_layerDash\\obj_layerDash.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "28cbb5e5-9095-484f-85d7-c083730e7f04",
             "Value": {
                 "id": "14b41837-ee1a-46c5-8d59-c9220e5ce059",
@@ -503,6 +511,14 @@
             }
         },
         {
+            "Key": "881f865a-c800-4533-b330-23198c7ff309",
+            "Value": {
+                "id": "34a38a10-896b-4e4d-b7ec-a8a9b4bb6577",
+                "resourcePath": "objects\\obj_cardLayerDash\\obj_cardLayerDash.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "8eb9dca2-2253-4b99-9bc1-2cf405efd2eb",
             "Value": {
                 "id": "0d7d8f62-7778-4397-b0df-0cad1c947c8a",
@@ -599,6 +615,14 @@
             }
         },
         {
+            "Key": "aefc95c6-d611-40a5-9a2b-779cc500bb4c",
+            "Value": {
+                "id": "c0e0f46a-2dae-449d-a19a-5c2ff5f1be14",
+                "resourcePath": "sprites\\spr_cardLayerDash\\spr_cardLayerDash.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "b82e4fdd-e14f-4308-a7f4-03648930d88f",
             "Value": {
                 "id": "1fa61990-529b-4571-be89-c6adc4675589",
@@ -692,6 +716,14 @@
                 "id": "f29dfa3e-786d-4252-983d-86d8a57e98e1",
                 "resourcePath": "fonts\\font1\\font1.yy",
                 "resourceType": "GMFont"
+            }
+        },
+        {
+            "Key": "cf4a1307-20a5-4e12-b961-757b0d2255f1",
+            "Value": {
+                "id": "ac8caa91-8255-43ca-a3ed-9c880a5c03be",
+                "resourcePath": "sprites\\spr_layerDash\\spr_layerDash.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

@@ -3,3 +3,6 @@
 alarm_set(0,40)
 creator = 0
 depth = -40
+var currentTile = instance_position(x,y,obj_tiles)
+positionX = currentTile.positionX
+positionY = currentTile.positionY

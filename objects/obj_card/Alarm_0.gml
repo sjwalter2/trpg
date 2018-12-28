@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description Set up range finder?
 // You can write your code in this editor
 		xSize = 1
 		ySize = 1
