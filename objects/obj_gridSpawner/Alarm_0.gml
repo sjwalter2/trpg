@@ -36,8 +36,17 @@ while(playerSpawned < 10)
 			spotFound = 0
 		}
 	}
-	if(playerSpawned < 3)
-		var newPlayer = instance_create_depth(offsetX + xx*tileWidth, offsetY + yy*tileHeight, playerDepth, obj_bard)	
+	if(playerSpawned < 3){
+		var class = irandom_range(0,1);
+		switch class{
+			case 0:
+				var newPlayer = instance_create_depth(offsetX + xx*tileWidth, offsetY + yy*tileHeight, playerDepth, obj_bard)	
+				break;
+			case 1:
+				var newPlayer = instance_create_depth(offsetX + xx*tileWidth, offsetY + yy*tileHeight, playerDepth, obj_ragandbones)	
+				break;
+		}
+	}
 	else
 		var newPlayer = instance_create_depth(offsetX + xx*tileWidth, offsetY + yy*tileHeight, playerDepth, obj_soldier)	
 	newPlayer.positionX = xx

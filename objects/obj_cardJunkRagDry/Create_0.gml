@@ -12,7 +12,7 @@ attack = 0
 block = 1
 
 object = obj_junkRagDry
-cost = 1
+cost = 0
 
 damage = -1
 bonusDamage = -1
