@@ -95,6 +95,14 @@
             }
         },
         {
+            "Key": "11fc613d-39b8-4f39-b3dd-131094c55fb4",
+            "Value": {
+                "id": "a2d20d15-21c6-48ba-87f2-bc4212d81fcb",
+                "resourcePath": "scripts\\swapLayer\\swapLayer.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "1261ec35-4daf-4f92-8ec5-8ec728503d3d",
             "Value": {
                 "id": "b0e81b6c-cc67-427d-a73a-8ecf03e45819",
@@ -918,7 +926,8 @@
         "dd3205cb-fdca-494a-b55b-5ecbda9815b9",
         "2ad8e9c6-1dbb-4210-ab5a-b2490af04263",
         "d8828043-72d2-4251-b0b0-890b0022e0c8",
-        "974beb53-117a-4fb4-8b99-3272bf363e82"
+        "974beb53-117a-4fb4-8b99-3272bf363e82",
+        "11fc613d-39b8-4f39-b3dd-131094c55fb4"
     ],
     "tutorial": ""
 }

@@ -10,17 +10,7 @@ with(obj_character)
 if(global.turn  = 0 && !move && image_index = 1)
 {
 	image_index = 0
-	global.gameLayer = !global.gameLayer
-	instance_activate_all()
-	with(obj_character)
-	{
-		selected = 0
-		arrow.pathX = []
-		arrow.pathY = []
-		arrow.count = 0
-		if(levelLayer != global.gameLayer)
-			instance_deactivate_object(id)
-	}
+	swapLayer()
 	var pathBlank = []
 	with(obj_tiles)
 	{

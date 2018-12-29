@@ -17,8 +17,8 @@ cost = 3
 damage = 3
 bonusDamage = 1
 
-hitAllies = 0
-hitEnemies = 0
+hitAllies = 1
+hitEnemies = 1
 hitGround = 1
 
 magic = 1
