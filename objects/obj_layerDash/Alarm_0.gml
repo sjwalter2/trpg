@@ -6,14 +6,13 @@
 
 var movingIsOk = true;
 
-if getPersonAt(positionX,positionY,!creator.levelLayer) != noone{  //For some reason, this only triggers if the other person is on my same layer
+if getPersonAt(positionX,positionY,!creator.levelLayer) != noone{
 	movingIsOk = false;
 }
 
 if movingIsOk{
 	var target;
 	target = getPersonAt(positionX + abs(positionX - creator.positionX),positionY + abs(positionY - creator.positionY),!creator.levelLayer);
-	//TODO: check if target is on my layer. maybe update getPersonAt script?
 	if target != noone{
 		//TODO: Damage target
 	}
