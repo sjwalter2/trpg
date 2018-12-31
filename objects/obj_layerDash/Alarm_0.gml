@@ -14,7 +14,7 @@ if movingIsOk{
 	var target;
 	target = getPersonAt(positionX + abs(positionX - creator.positionX),positionY + abs(positionY - creator.positionY),!creator.levelLayer);
 	if target != noone{
-		//TODO: Damage target
+		applyDamage(target,creator.attackDamage)
 	}
 	
 	
@@ -26,7 +26,10 @@ if movingIsOk{
 	creator.levelLayer = !creator.levelLayer	
 	
 	swapLayer();
-}
-instance_destroy()
+	discardSelf();
+} else {
 
-discardSelf();
+ //TODO: duplicate the logic of discarding a card
+}
+
+instance_destroy()

@@ -4,7 +4,7 @@ instance_destroy()
 if(position_meeting(x,y,obj_character))
 {
 	var target = instance_position(x,y,obj_character)
-	target.currentHealth -= creator.attackDamage
+	applyDamage(target,creator.attackDamage)
 }
 
 discardSelf()

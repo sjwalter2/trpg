@@ -39,6 +39,14 @@
             }
         },
         {
+            "Key": "04b8dc9c-3ed9-4dfe-b6c9-fa894ee5bd4f",
+            "Value": {
+                "id": "f5525547-a856-43b0-997d-e99aa3ce505c",
+                "resourcePath": "scripts\\applyDamage\\applyDamage.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "06c3a620-d88d-4a5a-b134-4c854c2195ee",
             "Value": {
                 "id": "232f226e-e941-49c5-be88-f4cdd09fd824",
@@ -927,7 +935,8 @@
         "2ad8e9c6-1dbb-4210-ab5a-b2490af04263",
         "d8828043-72d2-4251-b0b0-890b0022e0c8",
         "974beb53-117a-4fb4-8b99-3272bf363e82",
-        "11fc613d-39b8-4f39-b3dd-131094c55fb4"
+        "11fc613d-39b8-4f39-b3dd-131094c55fb4",
+        "04b8dc9c-3ed9-4dfe-b6c9-fa894ee5bd4f"
     ],
     "tutorial": ""
 }
