@@ -16,4 +16,15 @@ if global.gameLayer == levelLayer {
 	draw_set_alpha(1)
 
 	draw_self()
+	if(!selected)
+		depth = -10
+	else
+		depth = -15
+	
+	
+}
+else
+{
+	draw_sprite_ext(sprite_index,image_index,x-sprite_width/4,y-sprite_height/4,.35,.35,image_angle,image_blend,.8)
+	depth = -11
 }

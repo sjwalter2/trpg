@@ -27,10 +27,11 @@ while(playerSpawned < 10)
 	while(!spotFound)
 	{
 		var xx = irandom(width)
-		var yy = irandom(height)	
+		var yy = irandom(height)
+		var newLayer = irandom(1)
 		spotFound = 1
 		if(!position_meeting(offsetX + xx*tileWidth, offsetY + yy*tileHeight, obj_tiles) ||
-		position_meeting(offsetX + xx*tileWidth, offsetY + yy*tileHeight, obj_character) || 
+		getPersonAt(xx,yy,newLayer) ||
 		instance_position(offsetX + xx*tileWidth, offsetY + yy*tileHeight, obj_tiles).impassable)
 		{
 			spotFound = 0
@@ -52,7 +53,7 @@ while(playerSpawned < 10)
 	newPlayer.positionX = xx
 	newPlayer.positionY = yy
 	newPlayer.team = playerSpawned
-	newPlayer.levelLayer = irandom(1)
+	newPlayer.levelLayer = newLayer
 	if(playerSpawned >= 3)
 	{
 		newPlayer.team = 1

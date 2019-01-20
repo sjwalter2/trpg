@@ -7,12 +7,10 @@ if(global.turn != 0 && currentAi = noone && ready)
 	with(obj_character)
 	{
 		selected = 0
-		if(levelLayer != global.gameLayer)
-			instance_deactivate_object(id)
 	}
 	with(obj_character)	
 	{
-		if(ai && !aiMoved && team = global.turn)
+		if(levelLayer = global.gameLayer && ai && !aiMoved && team = global.turn)
 		{
 			other.currentAi = id;
 			other.setAlarm = 1 
@@ -25,10 +23,6 @@ if(global.turn != 0 && currentAi = noone && ready)
 	if(currentAi = noone && global.gameLayer = 0)
 	{
 		global.gameLayer = 1	
-		instance_activate_all()
-		with(obj_character)
-			if(levelLayer != global.gameLayer)
-				instance_deactivate_object(id)
 	}
 	else if(currentAi = noone && global.gameLayer = 1)
 	{
@@ -44,7 +38,6 @@ if(global.turn != 0 && currentAi = noone && ready)
 			pathY = pathBlank
 		}
 
-		instance_activate_all()
 		global.gameLayer = 0
 		with(obj_character)
 		{
@@ -61,9 +54,6 @@ if(global.turn != 0 && currentAi = noone && ready)
 			
 			
 		}
-		with(obj_character)
-			if(levelLayer != global.gameLayer)
-				instance_deactivate_object(id)	
 	}
 }
 

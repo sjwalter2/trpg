@@ -9,7 +9,7 @@ draw_self()
 
 if(inRange = 1)
 {
-	if(position_meeting(x,y,obj_character))
+	if(position_meeting(x,y,obj_character) && instance_position(x,y,obj_character).levelLayer = global.gameLayer)
 	{
 		var pathBlank = []
 		inRange = 0

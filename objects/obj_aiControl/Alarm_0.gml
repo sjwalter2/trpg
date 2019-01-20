@@ -19,7 +19,7 @@ with(obj_tiles)
 	{
 		with(obj_character)	
 		{
-			if(team = 0 && (dist = -1 || point_distance(other.x,other.y,x,y) < dist))	
+			if(global.gameLayer = levelLayer && team = 0 && (dist = -1 || point_distance(other.x,other.y,x,y) < dist))	
 			{
 				dist = point_distance(other.x,other.y,x,y)
 				currentTarget = id
@@ -38,7 +38,8 @@ for(var i = currentAi.attackRange; i > currentAi.minRange; i--)
 		with(obj_tiles)
 		{
 			if(currentTarget != noone && moveTile = noone && inRange = 1 && (!position_meeting(x,y,obj_character) 
-			|| instance_position(x,y,obj_character).id = other.currentAi) 
+			|| instance_position(x,y,obj_character).id = other.currentAi 
+			|| instance_position(x,y,obj_character).levelLayer != global.gameLayer) 
 			&&((positionX - i = tile.positionX && positionY = tile.positionY) 
 			|| (positionY - i = tile.positionY && positionX = tile.positionX) 
 			|| (positionX + i = tile.positionX && positionY = tile.positionY)  
