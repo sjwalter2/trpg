@@ -33,7 +33,7 @@ if(selected)
 			with(obj_character)
 			{
 				hover = 0
-				if(position_meeting(mouse_x,mouse_y,id) && team = 0 && !attack)	
+				if(position_meeting(mouse_x,mouse_y,id) && team = 0 && !attack && global.gameLayer = levelLayer)	
 				{
 					other.touching = id
 				}
