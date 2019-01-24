@@ -29,7 +29,7 @@ if(moving)
 	{
 		movingCount++
 		
-		var tile = instance_position( global.offsetX  + startX*global.tileWidth, global.offsetY + startY*global.tileHeight,obj_tiles)
+		var tile = instance_position(global.offsetX  + startX*global.tileWidth, global.offsetY + startY*global.tileHeight,obj_tiles)
 		if(currentTile != tile)
 			actionCurrent += tile.moveCost
 		currentTile = tile
@@ -50,7 +50,16 @@ if(moving)
 		}
 	}
 	else
-		move_towards_point(global.offsetX + startX*global.tileWidth, global.offsetY + startY*global.tileHeight,moveSpeed)
+	{
+		var currentCost = 1
+		if(array_length_1d(arrow.pathX) >= movingCount + 1 )
+		{
+			var nextTile = instance_position(global.offsetX  + arrow.pathX[movingCount]*global.tileWidth, global.offsetY + arrow.pathY[movingCount]*global.tileHeight,obj_tiles)
+			currentCost = nextTile.moveCost
+		}
+		image_speed = 1/currentCost
+		move_towards_point(global.offsetX + startX*global.tileWidth, global.offsetY + startY*global.tileHeight,moveSpeed/currentCost)
+	}
 	
 }
 else
