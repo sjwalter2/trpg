@@ -6,7 +6,7 @@ global.tileWidth = 32
 global.tileHeight = 32
 global.width = 8
 global.height = 8
-var roomWidth = global.width*global.tileWidth + 500
+var roomWidth = global.width*global.tileWidth + 760
 var roomHeight = global.height*global.tileHeight + 200
 if(roomWidth < 668)
 	roomWidth = 668

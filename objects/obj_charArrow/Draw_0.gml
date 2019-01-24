@@ -38,7 +38,7 @@ if(instance_exists(creator) && count >= 1 && creator.team = global.turn && creat
 		{
 			var xx = global.offsetX  + pathX[i]*global.tileWidth
 			var yy = global.offsetY + pathY[i]*global.tileHeight
-			var hh = 5
+			var hh = arrowWidth
 			
 			if(i = minArrow)
 				draw_line_width(creator.x, creator.y, global.offsetX  + pathX[i]*global.tileWidth + mult*(offsetX*arrowWidth/2), global.offsetY + pathY[i]*global.tileHeight+ mult*(offsetY*arrowWidth/2), arrowWidth)

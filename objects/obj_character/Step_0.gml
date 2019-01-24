@@ -5,6 +5,7 @@ arrow.pathY[0] = positionY
 
 if(moving)
 {
+	image_speed = 1
 	var pathBlank = []
 	var startX = positionX
 	var startY = positionY
@@ -51,6 +52,11 @@ if(moving)
 	else
 		move_towards_point(global.offsetX + startX*global.tileWidth, global.offsetY + startY*global.tileHeight,moveSpeed)
 	
+}
+else
+{
+	image_speed = 0
+	image_index = 0
 }
 if(!selected)
 	rangeFound = 0

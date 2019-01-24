@@ -40,6 +40,7 @@ for(var i = currentAi.attackRange; i > currentAi.minRange; i--)
 			if(currentTarget != noone && moveTile = noone && inRange = 1 && (!position_meeting(x,y,obj_character) 
 			|| instance_position(x,y,obj_character).id = other.currentAi 
 			|| instance_position(x,y,obj_character).levelLayer != global.gameLayer) 
+			&& getPersonAt(positionX,positionY,global.gameLayer) == noone
 			&&((positionX - i = tile.positionX && positionY = tile.positionY) 
 			|| (positionY - i = tile.positionY && positionX = tile.positionX) 
 			|| (positionX + i = tile.positionX && positionY = tile.positionY)  
