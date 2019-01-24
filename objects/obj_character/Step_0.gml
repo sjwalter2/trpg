@@ -62,14 +62,16 @@ if(moving)
 	}
 	
 }
-else
+else if(!selected)
 {
 	image_speed = 0
 	image_index = 0
 }
 if(!selected)
 	rangeFound = 0
-
+else if(!moving)
+	image_speed = .5
+	
 
 if(currentHealth <= 0)
 {
