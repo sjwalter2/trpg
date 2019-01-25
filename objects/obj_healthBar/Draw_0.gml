@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
-if(instance_exists(creator) && ((creator.selected || position_meeting(mouse_x,mouse_y,creator)) && creator.levelLayer == global.gameLayer)) 
+var tile = instance_position(creator.x,creator.y,obj_tiles)
+if(instance_exists(creator) && ((creator.selected || position_meeting(mouse_x,mouse_y,creator)) && creator.levelLayer == global.gameLayer) && tile.vision[creator.levelLayer]) 
 {
 	draw_set_color(c_black)
 	draw_rectangle(creator.x - creator.sprite_width/2+1, creator.y - creator.sprite_height-1, creator.x + creator.sprite_width/2-2, creator.y - creator.sprite_height*5/6+1,0)

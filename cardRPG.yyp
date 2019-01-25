@@ -751,6 +751,14 @@
             }
         },
         {
+            "Key": "d0de23f1-dc52-4a0b-bd6f-3547fcd9d758",
+            "Value": {
+                "id": "d59c7911-6815-42b4-91c6-f84382aae9d1",
+                "resourcePath": "scripts\\check_vision_range\\check_vision_range.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "d1c5e640-893f-42fa-aaf7-85332983ee9c",
             "Value": {
                 "id": "fdf869ac-b01e-48a4-b137-55d611b814ca",
@@ -929,6 +937,7 @@
     ],
     "script_order": [
         "2e7884ea-3953-49d6-8b00-b2e7cd428141",
+        "d0de23f1-dc52-4a0b-bd6f-3547fcd9d758",
         "8eb9dca2-2253-4b99-9bc1-2cf405efd2eb",
         "3daffb1b-c130-4342-96d8-143841cb9d81",
         "dd3205cb-fdca-494a-b55b-5ecbda9815b9",

@@ -1,7 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
+var tile = instance_position(x,y,obj_tiles)
 
-if global.gameLayer == levelLayer {
+
+if global.gameLayer == levelLayer && tile.vision[levelLayer]{
 	characterRange()
 
 
@@ -23,7 +25,7 @@ if global.gameLayer == levelLayer {
 	
 	
 }
-else
+else if tile.vision[levelLayer]
 {
 	draw_sprite_ext(sprite_index,image_index,x-sprite_width/4,y-sprite_height/4,.35,.35,image_angle,image_blend,.8)
 	depth = -11

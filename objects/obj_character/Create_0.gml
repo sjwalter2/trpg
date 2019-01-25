@@ -39,8 +39,8 @@ minRange = 2
 magic = 0
 physical = 0
 dexterity = 0
-
-
+visionRange = 3
+aiAttack = 0
 
 switch irandom_range(0,1){
 	case 0:

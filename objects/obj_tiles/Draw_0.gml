@@ -17,6 +17,7 @@ else
 }
 
 
+
 if(inRange = 1)
 {
 	if(position_meeting(x,y,obj_character) && instance_position(x,y,obj_character).levelLayer = global.gameLayer)
@@ -64,7 +65,7 @@ if(target = 1 || (inRange = 1 && position_meeting(mouse_x,mouse_y,id)) && !mouse
 	//draw_circle(global.tileWidth/2 + global.tileWidth*positionX, global.tileHeight/2 + global.tileHeight*positionY, 6,0)	
 	with(obj_character)
 	{
-		if(selected)
+		if(selected && other.vision[global.gameLayer])
 		{
 			arrow.pathX = other.pathX	
 			arrow.pathY = other.pathY
@@ -83,5 +84,11 @@ else
 	depth = 0
 	
 	
-
+if(!vision[global.gameLayer])
+{
+	draw_set_color(c_black)
+	draw_set_alpha(1)
+	draw_rectangle(bbox_left,bbox_top,bbox_right,bbox_bottom,0)
+	draw_set_alpha(1)
+}
 	

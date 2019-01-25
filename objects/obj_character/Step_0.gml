@@ -80,3 +80,4 @@ if(currentHealth <= 0)
 
 if(currentHealth > baseHealth)
 	currentHealth = baseHealth
+	

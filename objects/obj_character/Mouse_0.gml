@@ -1,7 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 var currentAttack = 0
-if(global.turn = 0 && levelLayer == global.gameLayer)
+var tile = instance_position(x,y,obj_tiles)
+if(global.turn = 0 && levelLayer == global.gameLayer && tile.vision[levelLayer])
 {
 with(obj_character)
 	if(attack || moving)

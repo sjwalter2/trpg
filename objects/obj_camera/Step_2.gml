@@ -7,6 +7,7 @@ y = mouse_y
 }
 else
 {
+	zoom_level = 1
 	with(obj_character)	
 	{
 		if(selected && image_alpha = 1)	
@@ -20,7 +21,7 @@ else
 
 //Move the zoom level based on mouse scrolling. Clamp the value so stuff doesn't get too silly.
 prevZoom = zoom_level
-zoom_level = clamp(zoom_level + (((mouse_wheel_down() - mouse_wheel_up())) * 0.5), .5, 2);
+zoom_level = clamp(zoom_level + (((mouse_wheel_down() - mouse_wheel_up())) * 0.5), .5, 1);
 
 //Get current size
 var view_w = camera_get_view_width(view_camera[0]);

@@ -3,9 +3,9 @@
 draw_set_font(font1)
 draw_set_halign(fa_left)
 draw_set_valign(fa_top)
-
+var tile = instance_position(x,y,obj_tiles)
 draw_set_color(c_white)
-	if selected {
+	if selected && tile.vision[levelLayer]{
 		draw_text(30, 10,name);
 		draw_text(55 + string_width(string(name)) - string_width("-")/2, 10, "-");
 		draw_text(80 +  string_width(string(name)), 10,type);

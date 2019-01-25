@@ -22,7 +22,7 @@ if(!currentAttack && selected && !moving && team = 0 && global.turn = team && !a
 							(tile.positionX != pathX[count - 1] || 
 							tile.positionY != pathY[count - 1])) && 
 							(other.actionMax - other.currentMove ) >= tile.moveCost &&
-							!tile.impassable)
+							!tile.impassable) && tile.vision[global.gameLayer]
 							{
 								count++
 								pathX[count] = tile.positionX
