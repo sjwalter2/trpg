@@ -5,6 +5,7 @@
 event_inherited();
 
 type = "Bard"
+sprite = "spr_bard"
 attackRange = 2
 magic = 5
 physical = 2

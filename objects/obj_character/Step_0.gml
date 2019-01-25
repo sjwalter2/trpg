@@ -59,6 +59,17 @@ if(moving)
 		}
 		image_speed = 1/currentCost
 		move_towards_point(global.offsetX + startX*global.tileWidth, global.offsetY + startY*global.tileHeight,moveSpeed/currentCost)
+		switch((round(direction/90)*90) mod 360)
+		{
+			case 0: sprite_index = asset_get_index(sprite + "WalkR")
+			break;
+			case 90: sprite_index = asset_get_index(sprite + "WalkU")
+			break;
+			case 180: sprite_index = asset_get_index(sprite + "WalkL")
+			break;
+			case 270: sprite_index = asset_get_index(sprite + "WalkD")
+			break;
+		}
 	}
 	
 }
@@ -70,7 +81,10 @@ else if(!selected)
 if(!selected)
 	rangeFound = 0
 else if(!moving)
-	image_speed = .5
+{
+	sprite_index = asset_get_index(sprite + "Idle")
+	image_speed = 1	
+}
 	
 
 if(currentHealth <= 0)

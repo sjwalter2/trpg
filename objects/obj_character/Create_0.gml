@@ -41,6 +41,7 @@ physical = 0
 dexterity = 0
 visionRange = 3
 aiAttack = 0
+sprite = ""
 
 switch irandom_range(0,1){
 	case 0:

@@ -5,6 +5,7 @@
 event_inherited();
 
 type = "Rag and Bones Man"
+sprite = "spr_ragandbones"
 attackRange = 2
 magic = 4
 physical = 4

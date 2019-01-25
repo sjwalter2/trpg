@@ -8,6 +8,8 @@ draw_set_valign(fa_middle)
 draw_set_halign(fa_center)
 draw_text(x,y,"Turn: " + string(global.turn))
 
+move = 0
 with(obj_character)
-	if(actionCurrent = 0 && noMove = 0 && global.turn != 0)
-		move =1
+	if moving || (actionCurrent = 0 && noMove = 0 && global.turn != 0)
+		other.move = 1
+		

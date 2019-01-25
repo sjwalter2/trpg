@@ -9,7 +9,7 @@ if(position_meeting(global.offsetX  + posX*global.tileWidth,global.offsetY + pos
 	{
 		with obj_character{
 //			if ((posX == positionX) && (posY == positionY) && (levelLayer == layertocheck)){
-			if(position_meeting(global.offsetX  + posX*global.tileWidth,global.offsetY + posY*global.tileHeight,id) && (levelLayer == layertocheck)){
+			if(position_meeting(global.offsetX + posX*global.tileWidth,global.offsetY + posY*global.tileHeight,id) && (levelLayer == layertocheck)){
 				returnobject = id;
 			}
 		}
