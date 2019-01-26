@@ -50,9 +50,9 @@ for(var rotate = 0; rotate <= 3; rotate++)
 		else
 			break;
 		
-		if(rangeType = 1 && (position_meeting(xx+w*checkX,yy+h*checkY,obj_character) && instance_position(xx+w*checkX,yy+h*checkY,obj_character).levelLayer == global.gameLayer) && tile.vision[global.gameLayer]){
-			break;
+		if  (rangeType = 1 && (getPersonAt(tile.positionX,tile.positionY,global.gameLayer) != noone || (position_meeting(xx+w*checkX,yy+h*checkY,obj_character) && instance_position(xx+w*checkX,yy+h*checkY,obj_character).levelLayer == global.gameLayer) && tile.vision[global.gameLayer])){
 			tile.inRange = 0
+			break;
 			}
 		if(tile.moveCost*useTerrain + i <= actions && (!tile.impassable || !useTerrain))
 		{

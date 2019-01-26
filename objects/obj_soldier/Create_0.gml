@@ -6,7 +6,7 @@ event_inherited();
 
 type = "Soldier"
 sprite = "spr_soldier"
-attackRange = 1
+attackRange = 2
 minRange = 0
 actionMax = 4
 attackDamage = 5
