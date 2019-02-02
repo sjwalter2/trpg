@@ -10,7 +10,9 @@ if(posX != width && posX != 0 && posY != height && posY != 0)
 	if(creator.validGrid[posY -  1,posX] == gridNum && creator.validGrid[posY +  1,posX] == gridNum && creator.validGrid[posY ,posX-  1] == gridNum && creator.validGrid[posY ,posX+  1] == gridNum)
 		edge = 0
 }
-var col = make_color_hsv(hue+randHue,sat+50*edge+randSat,val-30*edge*!hover-colorOff*30+randVal)
+var col = make_color_hsv(hue+randHue,sat+50*edge+randSat,val-30*edge-colorOff*30+randVal)
+if(hover && edge)
+var col = make_color_hsv(hue+randHue,sat+50*edge+randSat,val)
 draw_set_color(col)
 if(capital > 1)
 {

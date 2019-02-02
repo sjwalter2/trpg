@@ -12,8 +12,8 @@ hue = 0
 creator = 0
 edge = 1
 capital = 0
-chanceMax = 40
-chanceMin = 5
+chanceMax = 30
+chanceMin = 4
 capitalSet = 0
 colorOff = 0
 hover = 0
@@ -28,4 +28,4 @@ d = 0
 l = 0
 r = 0
 gridNum = 0
-alarm_set(0,1)
+alarm_set(0,irandom_range(1,2))

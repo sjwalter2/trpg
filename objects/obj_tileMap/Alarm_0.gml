@@ -35,6 +35,6 @@ else if !(posY < height - 1 && creator.validGrid[posY + 1, posX] = 1)
 	
 if!(u && d && l && r)
 {
-	alarm_set(0,1)
+	alarm_set(0,irandom_range(1,2))
 	chance = irandom_range(chanceMin,chanceMax)	
 }
