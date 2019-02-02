@@ -5,7 +5,7 @@ height = 135
 width = 120
 border = 0
 expand = 16
-
+drawGrid = []
 gridW = (room_width/2 - 2*border)/width
 gridH = (room_height - 2*border)/height
 var minimum = irandom_range(5,10)
@@ -94,17 +94,19 @@ for(var i = 0; i < groups; i++)
 	 ds_list_add(colors, i*floor(255/(groups)))
 	 
 ds_list_shuffle(colors)
+
+var checkArea = 12
 for(var i = 2; i < groups+2; i++)
 {
 	var validStart = 0
 	while(validStart = 0)
 	{
-		var xx = irandom_range(3, width-3)
-		var yy = irandom_range(3, height-3)	
+		var xx = irandom_range(checkArea, width-checkArea)
+		var yy = irandom_range(checkArea, height-checkArea)	
 		validStart = 1
-			for(var k = -3; k < 3; k++)
-				for(var l = -3; l < 3; l++)
-					if(validGrid[yy+k,xx+l] != 1)
+			for(var k = -checkArea; k < checkArea; k++)
+				for(var l = -checkArea; l < checkArea; l++)
+					if(validGrid[yy+k,xx+l] > 1 || validGrid[yy+floor(k/4),xx+floor(l/4)] = 0)
 						validStart = 0
 	}
 	var tile = instance_create_depth(border+xx*gridW,border+yy*gridH,-1,obj_tileMap)
@@ -123,3 +125,4 @@ for(var i = 2; i < groups+2; i++)
 	validGrid[yy,xx] = i
 }
 alarm_set(1,40)
+drawGrid = validGrid
