@@ -27,3 +27,5 @@ if(mouse_x >= creator.startX + border + posX*gridW && mouse_y >= border+posY*gri
 		}
 	}
 }
+if(hover && mouse_check_button(mb_left))
+	room_goto_next()
