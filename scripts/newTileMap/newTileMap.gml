@@ -16,9 +16,9 @@ var tile = instance_create_depth(border+xx*gridW + gridW/2,border+yy*gridH + gri
 	tile.creator = creator
 	tile.colorOff = colorOff
 	tile.gridNum = gridNum
-	tile.randHue = randHue + irandom_range(-0,0)
+	tile.randHue = randHue + irandom_range(-0,2)
 	tile.randSat = randSat  + irandom_range(0,4)
-	tile.randVal = randVal + irandom_range(-4,0)
+	tile.randVal = randVal //+ irandom_range(-2,0)
 	if(capital > 0)
 		tile.capital = capital-1
 

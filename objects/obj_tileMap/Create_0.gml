@@ -12,17 +12,24 @@ hue = 0
 creator = 0
 edge = 1
 capital = 0
-chanceMax = 30
-chanceMin = 4
+chanceMax = 20
+chanceMin = 3
 capitalSet = 0
 colorOff = 0
 hover = 0
+finish = 0
+
+
+sparkle = 0
+returnTrigger = 0
 randHue = irandom_range(-1,1)
 randSat = irandom_range(-2,2)
 randVal = irandom_range(-2,2)
 chance = irandom_range(chanceMin, chanceMax)
-val = irandom_range(230,255)
+val = irandom_range(200,225)
 sat = irandom_range(80,125)
+
+
 u = 0
 d = 0
 l = 0
