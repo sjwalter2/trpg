@@ -1,7 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
-if(image_alpha = .6)
-{
-sprite_index = spr_backArrow
-image_index = 1
-}
+depth = 15
+size = 1
+gridNum = 0
+creator = 0
+l = 0
+r = 0
+u = 0
+d = 0

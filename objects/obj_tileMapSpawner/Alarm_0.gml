@@ -15,7 +15,7 @@ if(createNew)
 
 randomize()
 height = 135
-width = 240/number
+width = (240/number)
 border = 0
 expand = floor(irandom_range(10,15))
 drawGrid = []
@@ -163,7 +163,9 @@ for(var i = 0; i < height; i++)
 
 var colors = ds_list_create()
 var colorCount = 0
-
+with(obj_tileMapSpawner)
+	if(id != other.id && capitalsCreated > 0)
+		other.capitalsCreated = capitalsCreated
 
 for(var i = 0; i < groups*2; i++)
 	 ds_list_add(colors, i*floor(255/(groups*2)))
@@ -206,8 +208,11 @@ for(var i = 2; i < groups+2; i++)
 		tile.hue = ds_list_find_value(colors,i-2)
 		tile.gridNum = i
 		tile.capital = 3
-		tile.colorOff = colorOff
+		tile.colorOff = 0
+		capitalsCreated++;
+		tile.capitalGroup = capitalsCreated
 		validGrid[yy,xx] = i
+		
 	}
 }
 alarm_set(1,40)

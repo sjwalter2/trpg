@@ -11,10 +11,15 @@ var percentComplete = 0
 var totalSpaces = 0
 var spacesFilled = 0
 var finish = 1
+var spawnersFinished = 0
+var spawnerNum = 0
 with(obj_tileMapSpawner)
 {
+	spawnerNum++
 	if(!finished)
 		finish = 0
+	else
+		spawnersFinished++
 	for(var i = 0; i < height; i++)
 		for(var j = 0; j < width; j++)
 			{
@@ -29,7 +34,9 @@ with(obj_tileMap)
 		spacesFilled++	
 }
 
-percentComplete = spacesFilled/totalSpaces
+
+
+percentComplete = (spacesFilled + (.05)*totalSpaces*spawnersFinished)/(totalSpaces + totalSpaces*.05*spawnerNum)
 if(percentComplete > 1)
 	percentComplete = 1
 draw_set_color(c_ltgray)

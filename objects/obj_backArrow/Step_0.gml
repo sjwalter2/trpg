@@ -4,7 +4,7 @@ with(obj_tileMapSpawner)
 {
 	if(zoom = 0 && other.image_alpha > 0)
 		other.image_alpha -= .05
-	else if(zoom != 0  && other.image_alpha < 1)	
+	else if(zoom != 0  && other.image_alpha < .6 )	
 		other.image_alpha += .05
 }
 

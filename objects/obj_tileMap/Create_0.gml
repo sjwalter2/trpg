@@ -18,16 +18,20 @@ capitalSet = 0
 colorOff = 0
 hover = 0
 finish = 0
-
-
-sparkle = 0
+unlocked = 0
+capitalHover = 0
+capitalGroup = 0
+drawFlag = 0
+alarm_set(3,irandom_range(20,40))
+sparkle = 20
 returnTrigger = 0
 randHue = irandom_range(-1,1)
 randSat = irandom_range(-2,2)
 randVal = irandom_range(-2,2)
 chance = irandom_range(chanceMin, chanceMax)
-val = irandom_range(200,225)
-sat = irandom_range(80,125)
+val = irandom_range(155,225)
+sat = irandom_range(80,185)
+unlockVal = 120
 
 
 u = 0

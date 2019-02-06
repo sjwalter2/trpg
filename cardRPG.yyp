@@ -471,6 +471,14 @@
             }
         },
         {
+            "Key": "4f8618a6-1a7e-4710-be7b-b33610f302f4",
+            "Value": {
+                "id": "6f4e1e22-b309-4ef1-aa46-df83c4b23f2b",
+                "resourcePath": "rooms\\roomMap1\\roomMap1.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "5240dd3f-ea49-48ed-acd6-29aa72a622d9",
             "Value": {
                 "id": "2c5fa67d-9163-4f54-8bd7-dd964e5fe5dc",
@@ -620,6 +628,14 @@
                 "id": "e4635e86-4a28-4826-876a-86be9e37d1b9",
                 "resourcePath": "objects\\obj_light\\obj_light.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "7eeebc0b-1ea5-49e1-83ef-789050035e3f",
+            "Value": {
+                "id": "fa43918b-10d5-4d4a-a3f1-74d4810ec4e8",
+                "resourcePath": "sprites\\spr_flag\\spr_flag.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -835,6 +851,14 @@
             "Value": {
                 "id": "e824c12f-f416-4695-bfc3-4c8379797f2d",
                 "resourcePath": "objects\\obj_waterTile\\obj_waterTile.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "b986b660-626c-4729-b0f5-f84f105e6d37",
+            "Value": {
+                "id": "3a617ba0-0bab-4c50-96c7-8e303b5386fe",
+                "resourcePath": "objects\\obj_lightTile\\obj_lightTile.yy",
                 "resourceType": "GMObject"
             }
         },

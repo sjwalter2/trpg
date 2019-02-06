@@ -20,6 +20,9 @@ if(continuing)
 	alarm_set(1,10)
 else
 {
+with(obj_tileMapSpawner)
+	if(id != other.id && finished)
+		other.capitalsCreated = capitalsCreated + 1	
 with(obj_tileMap)	
 {	
 	if(creator = other && capital = 0 && irandom(25) = 0 && edge = 0 && typeCount[gridNum-2] < typeMax)
@@ -61,21 +64,45 @@ with(obj_tileMap)
 		{
 			typeCount[gridNum - 2]++
 			capital = 2
+			capitalGroup = other.capitalsCreated
 			tile = getMapTileAt(posX,posY+1, creator)
 			tile.capital = 1
+			tile.capitalGroup = other.capitalsCreated
 			tile = getMapTileAt(posX,posY-1, creator)
 			tile.capital = 1
+			tile.capitalGroup = other.capitalsCreated
 			tile = getMapTileAt(posX-1,posY, creator)
 			tile.capital = 1
+			tile.capitalGroup = other.capitalsCreated
 			tile = getMapTileAt(posX+1,posY, creator)
 			tile.capital = 1
+			tile.capitalGroup = other.capitalsCreated
+			
+			tile = getMapTileAt(posX,posY+2, creator)
+			tile.capitalGroup = other.capitalsCreated
+			tile = getMapTileAt(posX,posY-2, creator)
+			tile.capitalGroup = other.capitalsCreated
+			tile = getMapTileAt(posX+2,posY, creator)
+			tile.capitalGroup = other.capitalsCreated
+			tile = getMapTileAt(posX-2,posY, creator)
+			tile.capitalGroup = other.capitalsCreated
+			
+			tile = getMapTileAt(posX+1,posY+1, creator)
+			tile.capitalGroup = other.capitalsCreated
+			tile = getMapTileAt(posX-1,posY-1, creator)
+			tile.capitalGroup = other.capitalsCreated
+			tile = getMapTileAt(posX+1,posY-1, creator)
+			tile.capitalGroup = other.capitalsCreated
+			tile = getMapTileAt(posX-1,posY+1, creator)
+			tile.capitalGroup = other.capitalsCreated
+			other.capitalsCreated++
 		}
 		
 	}
 	
 }
 finished = 1	
-	
+
 }
 
 var fin = 1
@@ -86,3 +113,8 @@ with(obj_tileMapSpawner)
 if(fin)
 	with(obj_tileMap)
 		finish = 1
+		
+if(fin)
+{
+	alarm_set(2,30)
+}	

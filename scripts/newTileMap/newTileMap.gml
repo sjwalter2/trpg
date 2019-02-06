@@ -16,10 +16,14 @@ var tile = instance_create_depth(border+xx*gridW + gridW/2,border+yy*gridH + gri
 	tile.creator = creator
 	tile.colorOff = colorOff
 	tile.gridNum = gridNum
-	tile.randHue = randHue + irandom_range(-0,2)
-	tile.randSat = randSat  + irandom_range(0,4)
-	tile.randVal = randVal //+ irandom_range(-2,0)
+	tile.randHue = randHue + 1.5
+	tile.randSat = randSat  + irandom_range(2,2)
+	tile.randVal = randVal + irandom_range(1,1)
+	tile.unlockVal = unlockVal
 	if(capital > 0)
+	{
 		tile.capital = capital-1
+		tile.capitalGroup = capitalGroup
+	}
 
 	creator.validGrid[yy,xx] = gridNum
