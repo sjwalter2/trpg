@@ -3,8 +3,10 @@
 var continuing = 0
 var typeCount = []
 var typeMax = 2
-for(var i = 0; i < groups; i++)
-	typeCount[i] = 0
+
+with(obj_countries)
+	for(var i = 0; i < countries; i++)
+		typeCount[i] = 0
 
 for(var i = 0; i < height; i++)
 		for(var j = 0; j < width; j++)
@@ -20,17 +22,14 @@ if(continuing)
 	alarm_set(1,10)
 else
 {
-with(obj_tileMapSpawner)
-	if(id != other.id && finished)
-		other.capitalsCreated = capitalsCreated + 1	
 with(obj_tileMap)	
 {	
-	if(creator = other && capital = 0 && irandom(25) = 0 && edge = 0 && typeCount[gridNum-2] < typeMax)
+	if(creator = other && capital = 0 && irandom(25) = 0 && edge = 0 && typeCount[gridNum] < typeMax)
 	{
 		var xCheck = 0
 		var yCheck = 0
 		var skip = 0
-		for(var i = 1; i <= 12; i++)
+		for(var i = 1; i <= 16; i++)
 		{	
 			
 			switch(i mod 4)
@@ -55,47 +54,55 @@ with(obj_tileMap)
 			xCheck*=ceil(i/4)
 			yCheck*=ceil(i/4)
 			var tile = getMapTileAt(posX+xCheck,posY+yCheck, creator)
-			if(tile == noone || tile.edge || tile.capital != 0)
+			if(tile == noone )
+				skip = 1
+			else if(tile.edge || tile.capital != 0)
 				skip = 1
 				
 		}
 		
 		if(!skip)
 		{
-			typeCount[gridNum - 2]++
+			typeCount[gridNum]++
 			capital = 2
-			capitalGroup = other.capitalsCreated
+			var cap = 0
+			with(obj_capitals)
+			{
+				cap = capitalCreated
+				capitalFinished[capitalCreated] = 0
+				capitalCreated++
+			}
+			capitalGroup = cap
 			tile = getMapTileAt(posX,posY+1, creator)
 			tile.capital = 1
-			tile.capitalGroup = other.capitalsCreated
+			tile.capitalGroup = cap
 			tile = getMapTileAt(posX,posY-1, creator)
 			tile.capital = 1
-			tile.capitalGroup = other.capitalsCreated
+			tile.capitalGroup = cap
 			tile = getMapTileAt(posX-1,posY, creator)
 			tile.capital = 1
-			tile.capitalGroup = other.capitalsCreated
+			tile.capitalGroup = cap
 			tile = getMapTileAt(posX+1,posY, creator)
 			tile.capital = 1
-			tile.capitalGroup = other.capitalsCreated
+			tile.capitalGroup = cap
 			
 			tile = getMapTileAt(posX,posY+2, creator)
-			tile.capitalGroup = other.capitalsCreated
+			tile.capitalGroup = cap
 			tile = getMapTileAt(posX,posY-2, creator)
-			tile.capitalGroup = other.capitalsCreated
+			tile.capitalGroup = cap
 			tile = getMapTileAt(posX+2,posY, creator)
-			tile.capitalGroup = other.capitalsCreated
+			tile.capitalGroup = cap
 			tile = getMapTileAt(posX-2,posY, creator)
-			tile.capitalGroup = other.capitalsCreated
+			tile.capitalGroup = cap
 			
 			tile = getMapTileAt(posX+1,posY+1, creator)
-			tile.capitalGroup = other.capitalsCreated
+			tile.capitalGroup = cap
 			tile = getMapTileAt(posX-1,posY-1, creator)
-			tile.capitalGroup = other.capitalsCreated
+			tile.capitalGroup = cap
 			tile = getMapTileAt(posX+1,posY-1, creator)
-			tile.capitalGroup = other.capitalsCreated
+			tile.capitalGroup = cap
 			tile = getMapTileAt(posX-1,posY+1, creator)
-			tile.capitalGroup = other.capitalsCreated
-			other.capitalsCreated++
+			tile.capitalGroup = cap
 		}
 		
 	}
@@ -112,9 +119,13 @@ with(obj_tileMapSpawner)
 		
 if(fin)
 	with(obj_tileMap)
+	{
 		finish = 1
+		if(edge)	
+			alarm_set(1,1)
+	}
 		
 if(fin)
 {
-	alarm_set(2,30)
+	alarm_set(2,15)
 }	

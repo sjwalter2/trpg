@@ -20,6 +20,7 @@ var tile = instance_create_depth(border+xx*gridW + gridW/2,border+yy*gridH + gri
 	tile.randSat = randSat  + irandom_range(2,2)
 	tile.randVal = randVal + irandom_range(1,1)
 	tile.unlockVal = unlockVal
+	
 	if(capital > 0)
 	{
 		tile.capital = capital-1
@@ -27,3 +28,4 @@ var tile = instance_create_depth(border+xx*gridW + gridW/2,border+yy*gridH + gri
 	}
 
 	creator.validGrid[yy,xx] = gridNum
+	creator.tileGrid[yy,xx] = tile.id

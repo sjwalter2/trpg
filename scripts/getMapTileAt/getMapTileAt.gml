@@ -2,9 +2,9 @@ var xx = argument0
 var yy = argument1
 var create = argument2
 var tile = noone
-with(obj_tileMap)
+with(create)
 {
-	if(posX = xx && posY = yy && creator == create)	
-		tile = id
+	if(yy >= 0 && yy < height && xx >= 0 && xx < width)
+	tile = tileGrid[yy,xx]
 }
 return tile

@@ -1,6 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+	
+
+
 if(posX > 0 && creator.validGrid[posY, posX - 1] = 1&& (irandom(chance) = 0 || capital > 0))
 {
 	l = 1

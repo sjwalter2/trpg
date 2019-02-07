@@ -20,9 +20,9 @@ hover = 0
 finish = 0
 unlocked = 0
 capitalHover = 0
-capitalGroup = 0
+capitalGroup = -1
+unlockNeighbor = 0
 drawFlag = 0
-alarm_set(3,irandom_range(20,40))
 sparkle = 20
 returnTrigger = 0
 randHue = irandom_range(-1,1)
@@ -32,8 +32,13 @@ chance = irandom_range(chanceMin, chanceMax)
 val = irandom_range(155,225)
 sat = irandom_range(80,185)
 unlockVal = 120
+unlockable = 0
+unlockableHover = 0
+zoomNow = 0
+fadeIn = 0
+fadeDir = 1
 
-
+neighbors = []
 u = 0
 d = 0
 l = 0

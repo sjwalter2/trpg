@@ -1,3 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
-game_restart()
+if(zoom != 0)
+	with(obj_tileMap)
+	{
+		returnTrigger = 1
+		break;
+	}
+else
+	game_restart()

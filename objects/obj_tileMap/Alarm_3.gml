@@ -6,4 +6,4 @@ if(unlocked)
 	randSat += irandom_range(-1,1)
 	randVal += irandom_range(-1,1)
 }
-alarm_set(3,irandom_range(20,40))
+

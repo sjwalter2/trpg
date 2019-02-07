@@ -23,5 +23,5 @@ for(var i = 0; i < width+3; i++)
 }
 gridWaveX = nextWaveX
 gridWaveY = nextWaveY
-alarm_set(0,20)
+alarm_set(0,140)
 

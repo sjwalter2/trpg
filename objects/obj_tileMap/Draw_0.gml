@@ -1,15 +1,14 @@
 /// @description Insert description here
 // You can write your code in this editor
-if(edge)
-	depth = -3
 
-if(capital > 0)
+if(capital > 0 && depth != -6-capital)
 {
 	depth = -6-capital
 	hover = 0
 }
-if(finish && sparkle = 0 && irandom(500)= 0 && unlocked && capital = 0&& edge = 0)
-	sparkle = 20
+
+
+
 if(posX < width-1 && posX > 1 && posY < height-1 && posY > 1)
 {
 	if(creator.validGrid[posY -  1,posX] == gridNum && creator.validGrid[posY +  1,posX] == gridNum && creator.validGrid[posY ,posX-  1] == gridNum && creator.validGrid[posY ,posX+  1] == gridNum)
@@ -18,16 +17,28 @@ if(posX < width-1 && posX > 1 && posY < height-1 && posY > 1)
 else 
 {
 	edge = 1
-
 }
 
+if(edge && depth !=  -3)
+	depth = -3
+
+var relock = 0
+if(unlockableHover)
+{
+	relock = 1
+	unlocked = 1	
+}
 var col = make_color_hsv(hue+randHue*!edge,unlocked*(sat+50*edge+randSat*!edge + 20*hover) + !unlocked*70,(val-50*edge+randVal*!edge + 40*hover)*unlocked + unlockVal*!unlocked +!unlocked*edge*-20)
 
-if(hover && irandom(500) = 0 && sparkle = 0 && capital = 0)
-	sparkle = 15
-
-else if(creator.zoom != 0)
-	sparkle = 0
+var odds =1500
+if(creator.zoom != 0)
+	odds = 15000
+if(finish && sparkle = 0 && irandom(odds)= 0 && unlocked && capital = 0&& edge = 0)
+{
+	sparkle = 20
+	alarm_set(3,1)	
+}
+	
 	
 
 if(capital > 1)
@@ -40,18 +51,35 @@ else if(capital > 0)
 
 }
 
-draw_set_alpha(.6)
+
 if(capital)
 	draw_set_alpha(.2 + .2*capital)
+else
+	draw_set_alpha(.75)
 
-if(sparkle > 0 && creator.zoom = 0)
+if(sparkle > 0)
 {
 	col = merge_color(col, c_white,sparkle/30)
 	sparkle--	
 }
-
+if(edge && unlockable &&  fadeIn >0)
+{
+	
+	col = merge_color(col, c_white,.025*fadeIn)
+	
+}
+if(unlockable)
+{
+	fadeIn += fadeDir
+	if(fadeIn > 30 || fadeIn < -5)
+	{
+		fadeDir*=-1
+	}	
+	
+}
+	
 draw_set_color(col)
-
+	
 draw_rectangle(creator.startX  + posX*gridW,creator.startY + posY*gridH, creator.startX  + (posX+1)*gridW-1,creator.startY +(posY+1)*gridH-1,0)
 if(capitalHover)
 {
@@ -78,8 +106,19 @@ if(capital > 1 && drawFlag = 0 && finish && unlocked)
 	else
 		drawFlag = 2
 }
+
+var capFinished = 0
 if(drawFlag = 1)
-		if(creator.zoom = 0)
+{
+	with(obj_capitals)
+		if(capitalFinished[other.capitalGroup])
+			capFinished = 1
+			
+		if(creator.zoom = 0 && capFinished)
 			draw_sprite_ext(spr_flag,0,creator.startX  + posX*gridW + gridW*.5,creator.startY + posY*gridH ,1 ,1,0,c_white,1)
-		else
+		else if(capFinished)
 			draw_sprite_ext(spr_flag,0,creator.startX  + posX*gridW + gridW*.5,creator.startY + posY*gridH ,2 ,2,0,c_white,1)
+			
+}
+if(relock)
+	unlocked = 0

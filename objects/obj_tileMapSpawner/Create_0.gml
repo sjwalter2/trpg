@@ -11,4 +11,3 @@ number = irandom_range(1,2)
 createNew = 1;
 finished = 0
 zoom = 0
-capitalsCreated = 0

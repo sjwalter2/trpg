@@ -28,15 +28,18 @@ var bot  = irandom_range(iter+10,iter+20)
 var left = irandom_range(iter+10,iter+20)
 var right  = irandom_range(iter+10,iter+20)
 
-groups = floor(irandom_range(12,18)/number)
+groups = floor(irandom_range(12,16)/number)
 row = [];
 validGrid = []
-
+tileGrid = []
 for(var i = 0; i < height; i++)
 		for(var j = 0; j < width; j++)
 			{
 				validGrid[i,j] = 0
+				tileGrid[i,j] = noone
 			}
+			
+
 var rowSize = irandom_range(minimum,2*minimum)
 row[top,0] = irandom_range(width/4,width - width/4 - rowSize)
 row[top,1] = row[top,0] + rowSize
@@ -163,9 +166,7 @@ for(var i = 0; i < height; i++)
 
 var colors = ds_list_create()
 var colorCount = 0
-with(obj_tileMapSpawner)
-	if(id != other.id && capitalsCreated > 0)
-		other.capitalsCreated = capitalsCreated
+
 
 for(var i = 0; i < groups*2; i++)
 	 ds_list_add(colors, i*floor(255/(groups*2)))
@@ -206,12 +207,23 @@ for(var i = 2; i < groups+2; i++)
 		tile.gridH = gridH
 		tile.creator = id;
 		tile.hue = ds_list_find_value(colors,i-2)
-		tile.gridNum = i
+		with(obj_countries)
+		{
+			tile.gridNum = countries
+			countriesFinished[countries] = 0
+			countriesUnlocked[countries] = 0
+			countries++
+		}
 		tile.capital = 3
 		tile.colorOff = 0
-		capitalsCreated++;
-		tile.capitalGroup = capitalsCreated
-		validGrid[yy,xx] = i
+		with(obj_capitals)
+		{
+			tile.capitalGroup = capitalCreated
+			capitalFinished[capitalCreated] = 0
+			capitalCreated++
+		}
+		validGrid[yy,xx] = tile.gridNum
+		tileGrid[yy,xx] = tile.id
 		
 	}
 }

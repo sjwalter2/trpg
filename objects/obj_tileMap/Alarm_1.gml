@@ -1,16 +1,12 @@
 /// @description Insert description here
 // You can write your code in this editor
-with(obj_tileMap)	
+if(edge)
 {
-	if(gridNum = other.gridNum && posX = other.posX && capital = 0)	
-		if(posY = other.posY - 1 || posY = other.posY+1)
-			capital = 1
-	if(gridNum = other.gridNum && posY = other.posY && capital = 0)	
-		if(posX = other.posX - 1 || posX = other.posX+1)
-			capital = 1	
+
+	findNeighbors(getMapTileAt(posX - 1, posY, creator))
+	findNeighbors(getMapTileAt(posX + 1, posY, creator))
+	findNeighbors(getMapTileAt(posX, posY - 1, creator))
+	findNeighbors(getMapTileAt(posX, posY + 1, creator))
+
 }
-if(!capitalSet)
-{
-capitalSet = 1
-alarm_set(1,100)
-}
+	

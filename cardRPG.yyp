@@ -407,6 +407,14 @@
             }
         },
         {
+            "Key": "408304bd-37da-4b17-941b-bba2d6a0fb65",
+            "Value": {
+                "id": "ffbaa0f8-5616-4e91-b076-7ece138dd1f4",
+                "resourcePath": "objects\\obj_countries\\obj_countries.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "4603f7b9-f92a-4457-ad97-686600242f75",
             "Value": {
                 "id": "592c0c93-c6e0-4483-9057-99cecd5ad6ea",
@@ -524,6 +532,14 @@
                 "id": "fa7b80be-1ec0-4a6e-bb31-8a73d6db595e",
                 "resourcePath": "views\\56bd7a9f-c3cc-49b9-b890-92c6e2ba0d81.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "5b11b440-eb48-4886-a6ec-1c290244802e",
+            "Value": {
+                "id": "99204f1a-3ead-410a-84ab-b4fae6d4cd02",
+                "resourcePath": "scripts\\findNeighbors\\findNeighbors.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -943,6 +959,14 @@
             }
         },
         {
+            "Key": "c952a22c-4c9d-44ac-b01f-8674c7c98121",
+            "Value": {
+                "id": "234dfe0a-cba2-48e8-b58c-0d88504bcdf0",
+                "resourcePath": "objects\\obj_lightController\\obj_lightController.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "c9ea346d-1a0f-4f57-855c-f83d3dcb255e",
             "Value": {
                 "id": "388e842f-3299-47b3-9473-ccaf9b12587d",
@@ -1076,6 +1100,14 @@
                 "id": "e6133793-0b26-4b58-9f13-2393c3969e00",
                 "resourcePath": "scripts\\generateName\\generateName.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "deb188ce-387f-4d67-894f-6bb5bf769035",
+            "Value": {
+                "id": "f43e42b9-39f8-45c4-bd02-03ddcd014829",
+                "resourcePath": "objects\\obj_capitals\\obj_capitals.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1236,7 +1268,8 @@
         "04b8dc9c-3ed9-4dfe-b6c9-fa894ee5bd4f",
         "1756f481-1984-4c30-b32e-9527cd9c6188",
         "e95cd23e-25a7-47e8-9c01-abed6e2a01f9",
-        "dfb805f4-0868-4d91-abb9-c48687b3464d"
+        "dfb805f4-0868-4d91-abb9-c48687b3464d",
+        "5b11b440-eb48-4886-a6ec-1c290244802e"
     ],
     "tutorial": ""
 }
