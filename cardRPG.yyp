@@ -199,6 +199,14 @@
             }
         },
         {
+            "Key": "1f18579c-31a2-4a4a-ac67-dbe0f3cf9bb6",
+            "Value": {
+                "id": "7829425c-e9ad-47ae-ac3c-77ef3e7911e5",
+                "resourcePath": "scripts\\addTriangles\\addTriangles.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "215d7d07-488a-4f1f-b6bd-623054266fb4",
             "Value": {
                 "id": "847df275-8448-40a0-a7c8-1a4c8cab7b1c",
@@ -1269,7 +1277,8 @@
         "1756f481-1984-4c30-b32e-9527cd9c6188",
         "e95cd23e-25a7-47e8-9c01-abed6e2a01f9",
         "dfb805f4-0868-4d91-abb9-c48687b3464d",
-        "5b11b440-eb48-4886-a6ec-1c290244802e"
+        "5b11b440-eb48-4886-a6ec-1c290244802e",
+        "1f18579c-31a2-4a4a-ac67-dbe0f3cf9bb6"
     ],
     "tutorial": ""
 }

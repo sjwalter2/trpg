@@ -64,12 +64,14 @@ if(hover && mouse_check_button_released(mb_left) && finish && creator.zoom = 0)
 			gridH = 2*gridH
 			gridW = 2*gridW
 			sparkle = 30 
+			
 		}
 	}
 	with(obj_tileMapSpawner)
 		if(id != other.creator)
 			instance_deactivate_object(id)
-			
+	
+
 	creator.zoom = gridNum
 	creator.prevStartX = creator.startX
 	creator.prevStartY = creator.startY

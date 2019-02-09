@@ -79,8 +79,15 @@ if(unlockable)
 }
 	
 draw_set_color(col)
-	
+
+var currentAlpha = draw_get_alpha()
+
+
 draw_rectangle(creator.startX  + posX*gridW,creator.startY + posY*gridH, creator.startX  + (posX+1)*gridW-1,creator.startY +(posY+1)*gridH-1,0)
+
+	
+draw_set_alpha(currentAlpha)
+
 if(capitalHover)
 {
 	draw_set_color(c_white)

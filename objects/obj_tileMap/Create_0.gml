@@ -37,6 +37,16 @@ unlockableHover = 0
 zoomNow = 0
 fadeIn = 0
 fadeDir = 1
+//triangleSet = 0
+//TUR = 0
+//TUL = 0
+//TDR = 0
+//TDL = 0
+//TLU = 0
+//TLD = 0
+//TRU = 0
+//TRD = 0
+
 
 neighbors = []
 u = 0
