@@ -1,15 +1,36 @@
 /// @description Insert description here
 // You can write your code in this editor
-draw_set_alpha(.75/size)
-draw_set_color(c_white)
-for(var i = 1; i < currentSize+irandom(1); i+=1)
-	draw_circle(x,y,i,0)
-	
-currentSize+=grow
-if(currentSize > size && alarm_get(0) = -1)
+if(creator != noone &&  (creator.unlocked || creator.unlockable || creator.unlockableHover))
 {
-	alarm_set(0,2*size)
-	grow = 0	
+	var xx = 0
+	var yy = 0
+	var large = 0
+	with(creator)
+	{
+		xx = creator.startX  + posX*gridW + gridW/4
+		yy = creator.startY + posY*gridH + gridH/4	
+		if(creator.zoom = gridNum)
+			large = 1
+
+	}
+	x = xx
+	y = yy
+	if(large)
+		size = 2*startSize
+	else
+		size = startSize
+		
+		
+	var capFinished = 0
+	with(obj_capitals)
+		if(capitalFinished[other.creator.capitalGroup])
+			capFinished = 1
+	
+	if(!capFinished)
+	{
+		draw_set_alpha(1.5/size)
+		draw_set_color(c_white)
+		for(var i = 1; i < size; i+=1)
+			draw_circle(x+large,y+large,i,0)		
+	}
 }
-if(currentSize <= 0 && grow < 0)
-	instance_destroy()

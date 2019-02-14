@@ -47,8 +47,13 @@ if(hover && mouse_check_button_released(mb_left) && finish && creator.zoom = 0)
 	
 	with(obj_tileMap)
 	{
-		if(gridNum != other.gridNum)	
+		if(gridNum != other.gridNum)
+		{
 			instance_deactivate_object(id)
+			if(light!= noone)	
+				instance_deactivate_object(light)
+		}
+			
 		else if(gridNum == other.gridNum)
 		{
 			hover = 0
@@ -204,7 +209,11 @@ if(unlockableHover && unlockable = 1 && mouse_check_button_released(mb_left))
 	with(obj_tileMap)
 	{
 		if(gridNum != other.gridNum)	
+		{
 			instance_deactivate_object(id)
+			if(light!= noone)	
+				instance_deactivate_object(light)
+		}
 		else if(gridNum == other.gridNum)
 		{
 			hover = 0

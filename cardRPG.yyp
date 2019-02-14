@@ -967,14 +967,6 @@
             }
         },
         {
-            "Key": "c952a22c-4c9d-44ac-b01f-8674c7c98121",
-            "Value": {
-                "id": "234dfe0a-cba2-48e8-b58c-0d88504bcdf0",
-                "resourcePath": "objects\\obj_lightController\\obj_lightController.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "c9ea346d-1a0f-4f57-855c-f83d3dcb255e",
             "Value": {
                 "id": "388e842f-3299-47b3-9473-ccaf9b12587d",

@@ -37,6 +37,8 @@ unlockableHover = 0
 zoomNow = 0
 fadeIn = 0
 fadeDir = 1
+
+light = noone
 //triangleSet = 0
 //TUR = 0
 //TUL = 0

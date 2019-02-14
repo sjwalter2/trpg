@@ -207,6 +207,9 @@ for(var i = 2; i < groups+2; i++)
 		tile.gridH = gridH
 		tile.creator = id;
 		tile.hue = ds_list_find_value(colors,i-2)
+		tile.light = instance_create_depth(border+xx*gridW,border+yy*gridH,15,obj_light)
+		tile.light.creator = tile
+		tile.light.startSize = 15
 		with(obj_countries)
 		{
 			tile.gridNum = countries

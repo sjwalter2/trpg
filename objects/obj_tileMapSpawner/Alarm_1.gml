@@ -66,6 +66,9 @@ with(obj_tileMap)
 			typeCount[gridNum]++
 			capital = 2
 			var cap = 0
+			light = instance_create_depth(posX*gridW,posY*gridH,15,obj_light)
+			light.creator = id
+			light.startSize = 10
 			with(obj_capitals)
 			{
 				cap = capitalCreated

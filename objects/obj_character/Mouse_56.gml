@@ -25,4 +25,8 @@ if(global.turn = 0 && currentMove > 0 && !moving && !attack && team = 0 && arrow
 	}
 	
 	instance_activate_object(id)
+		if(light!= noone)	
+		{
+				instance_activate_object(light)
+		}
 }
